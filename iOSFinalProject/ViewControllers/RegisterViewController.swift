@@ -8,29 +8,59 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
-
-    @IBOutlet weak var nametext: UITextField!
+class RegisterViewController: BaseLoginViewController {
+    
+//    @IBOutlet weak var nameText: UITextField!
+    @IBOutlet weak var userNameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var repasswordText: UITextField!
+    @IBOutlet weak var btnRegister: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        btnRegister.isEnabled = false
+//        setupAddTargetIsNotEmptyTextFields()
     }
     
-
-    @IBAction func clickedRegister(_ sender: Any) {
+    override func moveToApp() {
+        performSegue(withIdentifier: "showAppFromRegister", sender: self)
+    }
+    
+    override func notLoggedIn(error: String?) {
+        showErrorAlert(title: "Sorry, registration wasn't succesfull")
+    }
+    
+    private func setupAddTargetIsNotEmptyTextFields() {
+//        nameText.addTarget(self, action: #selector(textFieldsIsNotEmpty),
+//                           for: .editingChanged)
+        passwordText.addTarget(self, action: #selector(textFieldsIsNotEmpty),
+                               for: .editingChanged)
+        repasswordText.addTarget(self, action: #selector(textFieldsIsNotEmpty),
+                                 for: .editingChanged)
+    }
+    
+    @objc func textFieldsIsNotEmpty(sender: UITextField) {
         
+        sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
+        
+        guard
+//            let email = nameText.text, !email.isEmpty,
+            let password = passwordText.text, !password.isEmpty,
+            let confirmPassword = repasswordText.text,
+            password == confirmPassword
+            else
+        {
+            btnRegister.isEnabled = false
+            return
+        }
+        // enable okButton if all conditions are met
+        btnRegister.isEnabled = true
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func clickedRegister(_ sender: Any) {
+        NSLog("clickedRegister")
+//        if let userName = nameText.text, let password = passwordText.text{
+//            Model.instance.registerUser(email: userName, password: password)
+//        }
     }
-    */
-
 }

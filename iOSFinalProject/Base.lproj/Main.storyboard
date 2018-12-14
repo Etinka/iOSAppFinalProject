@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,7 +34,6 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="clickedLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AeT-vg-7ZF"/>
-                                    <segue destination="Jrm-Hb-TI4" kind="show" id="rKS-VW-ivO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA4-3I-oqj">
@@ -66,6 +64,7 @@
                     <connections>
                         <outlet property="nameText" destination="605-Cl-Pqe" id="bBm-dl-4sY"/>
                         <outlet property="passwordText" destination="byH-O3-C2I" id="nmx-eH-dc1"/>
+                        <segue destination="Jrm-Hb-TI4" kind="show" identifier="showAppFromLogin" id="wXq-8r-dIj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -228,9 +227,10 @@
                         <viewLayoutGuide key="safeArea" id="HDP-OL-ngg"/>
                     </view>
                     <connections>
-                        <outlet property="nametext" destination="PIl-vy-C5T" id="Jva-yX-UnY"/>
+                        <outlet property="btnRegister" destination="kLV-hP-cOq" id="8kD-Qc-KCT"/>
                         <outlet property="passwordText" destination="pF0-jf-kv7" id="hSs-qm-0ZW"/>
                         <outlet property="repasswordText" destination="M7z-Dn-NNr" id="eDU-hN-YiJ"/>
+                        <outlet property="userNameText" destination="PIl-vy-C5T" id="ze6-rX-jXE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z0a-Jb-ikA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -275,6 +275,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EhO-iH-Yrv"/>
+        <segue reference="wXq-8r-dIj"/>
     </inferredMetricsTieBreakers>
 </document>

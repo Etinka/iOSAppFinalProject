@@ -14,8 +14,24 @@ class Model{
     
     var modelFirebase = FirebaseModel()
     
+    func start(){
+        modelFirebase.start()
+    }
+    
     func stop(){
         modelFirebase.stop()
+    }
+    
+    func registerUser(email: String, password: String){
+        modelFirebase.registerUser(email: email, password: password)
+    }
+    
+    func signInUser(email: String, password: String){
+        modelFirebase.signInUser(email: email, password: password)
+    }
+    
+    func logout(){
+        modelFirebase.logout()
     }
     
     func getAllProperties(callback: @escaping ([Property]) -> Void){
