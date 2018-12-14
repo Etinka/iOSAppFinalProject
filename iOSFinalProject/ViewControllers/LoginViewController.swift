@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import MaterialTextField
 
 class LoginViewController: BaseLoginViewController {
 
-    @IBOutlet weak var nameText: UITextField!
+    @IBOutlet weak var nameText: MFTextField!
     @IBOutlet weak var passwordText: UITextField!
     
     override func viewDidLoad() {

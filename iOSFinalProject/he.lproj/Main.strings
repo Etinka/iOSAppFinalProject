@@ -1,0 +1,33 @@
+
+/* Class = "UITextField"; placeholder = "User name"; ObjectID = "605-Cl-Pqe"; */
+"605-Cl-Pqe.placeholder" = "שם משתמש";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "M7z-Dn-NNr"; */
+"M7z-Dn-NNr.placeholder" = "סיסמה";
+
+/* Class = "UITextField"; placeholder = "User name"; ObjectID = "PIl-vy-C5T"; */
+"PIl-vy-C5T.placeholder" = "שם משתמש";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "R4Y-tc-agd"; */
+"R4Y-tc-agd.normalTitle" = "כניסה";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "TkP-SB-pSJ"; */
+"TkP-SB-pSJ.text" = "Label";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "Uwq-15-daC"; */
+"Uwq-15-daC.text" = "כתובת";
+
+/* Class = "UIButton"; normalTitle = "Add comment"; ObjectID = "ZcF-SS-7ja"; */
+"ZcF-SS-7ja.normalTitle" = "הוסף תגובה";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "byH-O3-C2I"; */
+"byH-O3-C2I.placeholder" = "סיסמה";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "cA4-3I-oqj"; */
+"cA4-3I-oqj.normalTitle" = "הרשמה";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "kLV-hP-cOq"; */
+"kLV-hP-cOq.normalTitle" = "הרשמה";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "pF0-jf-kv7"; */
+"pF0-jf-kv7.placeholder" = "סיסמה";

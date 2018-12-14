@@ -6,12 +6,17 @@ target 'iOSFinalProject' do
   use_frameworks!
 
   # Pods for iOSFinalProject
+  
+  #Firebase
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/Phone'
   
+  #UI
+  pod 'MaterialTextField', '~> 0.2'
+
   
   target 'iOSFinalProjectTests' do
     inherit! :search_paths
