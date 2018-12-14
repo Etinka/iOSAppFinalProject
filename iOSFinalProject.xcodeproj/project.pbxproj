@@ -16,6 +16,17 @@
 		A59545F421C3BCB900DFF43C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59545F221C3BCB900DFF43C /* LaunchScreen.storyboard */; };
 		A59545FF21C3BCB900DFF43C /* iOSFinalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59545FE21C3BCB900DFF43C /* iOSFinalProjectTests.swift */; };
 		A595460A21C3BCB900DFF43C /* iOSFinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595460921C3BCB900DFF43C /* iOSFinalProjectUITests.swift */; };
+		A595462C21C3C0D900DFF43C /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595462B21C3C0D900DFF43C /* PropertyTableViewCell.swift */; };
+		A595463221C3C10000DFF43C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595462D21C3C0FF00DFF43C /* RegisterViewController.swift */; };
+		A595463321C3C10000DFF43C /* PropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595462E21C3C0FF00DFF43C /* PropertyViewController.swift */; };
+		A595463421C3C10000DFF43C /* PropertiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595462F21C3C10000DFF43C /* PropertiesTableViewController.swift */; };
+		A595463521C3C10000DFF43C /* AddCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595463021C3C10000DFF43C /* AddCommentViewController.swift */; };
+		A595463621C3C10000DFF43C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595463121C3C10000DFF43C /* LoginViewController.swift */; };
+		A595463A21C3C10F00DFF43C /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595463721C3C10F00DFF43C /* Property.swift */; };
+		A595463B21C3C10F00DFF43C /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595463821C3C10F00DFF43C /* FirebaseModel.swift */; };
+		A595463C21C3C10F00DFF43C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595463921C3C10F00DFF43C /* Model.swift */; };
+		A595463E21C3C1C600DFF43C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A595463D21C3C1C600DFF43C /* Main.storyboard */; };
+		A595464021C3C1D700DFF43C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A595463F21C3C1D700DFF43C /* GoogleService-Info.plist */; };
 		B659C42C038E712E758F1388 /* Pods_iOSFinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4973A371684EFF561252B252 /* Pods_iOSFinalProject.framework */; };
 		C9649B7555EB236412593D2C /* Pods_iOSFinalProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC04051FF014191DF1C76E7E /* Pods_iOSFinalProjectUITests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +69,17 @@
 		A595460521C3BCB900DFF43C /* iOSFinalProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSFinalProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A595460921C3BCB900DFF43C /* iOSFinalProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSFinalProjectUITests.swift; sourceTree = "<group>"; };
 		A595460B21C3BCB900DFF43C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A595462B21C3C0D900DFF43C /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
+		A595462D21C3C0FF00DFF43C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A595462E21C3C0FF00DFF43C /* PropertyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyViewController.swift; sourceTree = "<group>"; };
+		A595462F21C3C10000DFF43C /* PropertiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesTableViewController.swift; sourceTree = "<group>"; };
+		A595463021C3C10000DFF43C /* AddCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCommentViewController.swift; sourceTree = "<group>"; };
+		A595463121C3C10000DFF43C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A595463721C3C10F00DFF43C /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		A595463821C3C10F00DFF43C /* FirebaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
+		A595463921C3C10F00DFF43C /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A595463D21C3C1C600DFF43C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A595463F21C3C1D700DFF43C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7F24B86CC23F03311A26B17 /* Pods_iOSFinalProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSFinalProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92F515D7E3B09BB2D2A08DD /* Pods-iOSFinalProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFinalProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFinalProjectTests/Pods-iOSFinalProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC04051FF014191DF1C76E7E /* Pods_iOSFinalProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSFinalProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,12 +151,17 @@
 		A59545E521C3BCB800DFF43C /* iOSFinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				A595463D21C3C1C600DFF43C /* Main.storyboard */,
+				A595462A21C3C0C400DFF43C /* Cells */,
+				A595461F21C3C0A700DFF43C /* ViewControllers */,
+				A595461821C3C07000DFF43C /* Model */,
 				A59545E621C3BCB800DFF43C /* AppDelegate.swift */,
 				A59545E821C3BCB800DFF43C /* ViewController.swift */,
 				A59545EA21C3BCB800DFF43C /* Main.storyboard */,
 				A59545F021C3BCB900DFF43C /* Assets.xcassets */,
 				A59545F221C3BCB900DFF43C /* LaunchScreen.storyboard */,
 				A59545F521C3BCB900DFF43C /* Info.plist */,
+				A595463F21C3C1D700DFF43C /* GoogleService-Info.plist */,
 				A59545ED21C3BCB800DFF43C /* iOSFinalProject.xcdatamodeld */,
 			);
 			path = iOSFinalProject;
@@ -156,6 +183,36 @@
 				A595460B21C3BCB900DFF43C /* Info.plist */,
 			);
 			path = iOSFinalProjectUITests;
+			sourceTree = "<group>";
+		};
+		A595461821C3C07000DFF43C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A595463821C3C10F00DFF43C /* FirebaseModel.swift */,
+				A595463921C3C10F00DFF43C /* Model.swift */,
+				A595463721C3C10F00DFF43C /* Property.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A595461F21C3C0A700DFF43C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A595463021C3C10000DFF43C /* AddCommentViewController.swift */,
+				A595463121C3C10000DFF43C /* LoginViewController.swift */,
+				A595462F21C3C10000DFF43C /* PropertiesTableViewController.swift */,
+				A595462E21C3C0FF00DFF43C /* PropertyViewController.swift */,
+				A595462D21C3C0FF00DFF43C /* RegisterViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A595462A21C3C0C400DFF43C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A595462B21C3C0D900DFF43C /* PropertyTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		EB853B53EC40859895B98D2B /* Frameworks */ = {
@@ -279,7 +336,9 @@
 			files = (
 				A59545F421C3BCB900DFF43C /* LaunchScreen.storyboard in Resources */,
 				A59545F121C3BCB900DFF43C /* Assets.xcassets in Resources */,
+				A595464021C3C1D700DFF43C /* GoogleService-Info.plist in Resources */,
 				A59545EC21C3BCB800DFF43C /* Main.storyboard in Resources */,
+				A595463E21C3C1C600DFF43C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,9 +494,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A595463A21C3C10F00DFF43C /* Property.swift in Sources */,
+				A595463621C3C10000DFF43C /* LoginViewController.swift in Sources */,
 				A59545EF21C3BCB800DFF43C /* iOSFinalProject.xcdatamodeld in Sources */,
+				A595463C21C3C10F00DFF43C /* Model.swift in Sources */,
+				A595463B21C3C10F00DFF43C /* FirebaseModel.swift in Sources */,
+				A595463321C3C10000DFF43C /* PropertyViewController.swift in Sources */,
+				A595463221C3C10000DFF43C /* RegisterViewController.swift in Sources */,
 				A59545E921C3BCB800DFF43C /* ViewController.swift in Sources */,
+				A595463521C3C10000DFF43C /* AddCommentViewController.swift in Sources */,
+				A595462C21C3C0D900DFF43C /* PropertyTableViewCell.swift in Sources */,
 				A59545E721C3BCB800DFF43C /* AppDelegate.swift in Sources */,
+				A595463421C3C10000DFF43C /* PropertiesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
