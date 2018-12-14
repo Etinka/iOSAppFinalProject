@@ -10,7 +10,6 @@ import UIKit
 
 class RegisterViewController: BaseLoginViewController {
     
-//    @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var userNameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var repasswordText: UITextField!
@@ -19,7 +18,9 @@ class RegisterViewController: BaseLoginViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         btnRegister.isEnabled = false
-//        setupAddTargetIsNotEmptyTextFields()
+        btnRegister.setStyle()
+        setupAddTargetIsNotEmptyTextFields()
+
     }
     
     override func moveToApp() {
@@ -31,8 +32,8 @@ class RegisterViewController: BaseLoginViewController {
     }
     
     private func setupAddTargetIsNotEmptyTextFields() {
-//        nameText.addTarget(self, action: #selector(textFieldsIsNotEmpty),
-//                           for: .editingChanged)
+        userNameText.addTarget(self, action: #selector(textFieldsIsNotEmpty),
+                               for: .editingChanged)
         passwordText.addTarget(self, action: #selector(textFieldsIsNotEmpty),
                                for: .editingChanged)
         repasswordText.addTarget(self, action: #selector(textFieldsIsNotEmpty),
@@ -44,7 +45,7 @@ class RegisterViewController: BaseLoginViewController {
         sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
         
         guard
-//            let email = nameText.text, !email.isEmpty,
+            let email = userNameText.text, !email.isEmpty,
             let password = passwordText.text, !password.isEmpty,
             let confirmPassword = repasswordText.text,
             password == confirmPassword

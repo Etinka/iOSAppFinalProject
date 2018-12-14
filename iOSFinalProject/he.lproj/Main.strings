@@ -24,7 +24,7 @@
 "byH-O3-C2I.placeholder" = "סיסמה";
 
 /* Class = "UIButton"; normalTitle = "Register"; ObjectID = "cA4-3I-oqj"; */
-"cA4-3I-oqj.normalTitle" = "הרשמה";
+"cA4-3I-oqj.normalTitle" = "לא רשום? לחץ כאן";
 
 /* Class = "UIButton"; normalTitle = "Register"; ObjectID = "kLV-hP-cOq"; */
 "kLV-hP-cOq.normalTitle" = "הרשמה";

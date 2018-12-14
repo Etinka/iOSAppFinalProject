@@ -13,9 +13,11 @@ class LoginViewController: BaseLoginViewController {
 
     @IBOutlet weak var nameText: MFTextField!
     @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.setStyle()
     }
     
     override func moveToApp() {
