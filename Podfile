@@ -6,7 +6,13 @@ target 'iOSFinalProject' do
   use_frameworks!
 
   # Pods for iOSFinalProject
-
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Phone'
+  
+  
   target 'iOSFinalProjectTests' do
     inherit! :search_paths
     # Pods for testing
