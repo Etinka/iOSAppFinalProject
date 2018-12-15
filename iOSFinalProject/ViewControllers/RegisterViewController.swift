@@ -20,7 +20,6 @@ class RegisterViewController: BaseLoginViewController {
         btnRegister.isEnabled = false
         btnRegister.setStyle()
         setupAddTargetIsNotEmptyTextFields()
-
     }
     
     override func moveToApp() {
@@ -60,8 +59,8 @@ class RegisterViewController: BaseLoginViewController {
     
     @IBAction func clickedRegister(_ sender: Any) {
         NSLog("clickedRegister")
-//        if let userName = nameText.text, let password = passwordText.text{
-//            Model.instance.registerUser(email: userName, password: password)
-//        }
+        if let userName = userNameText.text, let password = passwordText.text{
+            Model.instance.registerUser(email: userName, password: password)
+        }
     }
 }

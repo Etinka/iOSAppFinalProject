@@ -16,13 +16,12 @@ class FirebaseModel{
     let db: Firestore
     let propertiesCollection:CollectionReference
     var listener: ListenerRegistration?
-    var handle: AuthStateDidChangeListenerHandle?
+    var authStateListener: AuthStateDidChangeListenerHandle?
     
     init() {
         FirebaseApp.configure()
         db = Firestore.firestore()
         propertiesCollection = db.collection("properties")
-//        logout()
     }
     
     func start(){
@@ -32,13 +31,19 @@ class FirebaseModel{
     func stop(){
         print("Stopping Firebase")
         listener?.remove()
-        Auth.auth().removeStateDidChangeListener(handle!)
+        if let authListener = authStateListener {
+            Auth.auth().removeStateDidChangeListener(authListener)
+        }
     }
     
     func startAuth(){
-        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+        authStateListener = Auth.auth().addStateDidChangeListener { (auth, user) in
             self.sendLoggedInStatusMessage(isLoggedIn: user != nil)
         }
+    }
+    
+    func isUserLoggedIn() -> Bool{
+        return Auth.auth().currentUser != nil
     }
     
     func registerUser(email: String, password: String){

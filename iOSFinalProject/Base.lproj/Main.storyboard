@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fcu-wQ-dWJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sMV-Xa-RbR">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,37 +15,37 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="iOSFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="605-Cl-Pqe">
-                                <rect key="frame" x="16" y="101" width="382" height="30"/>
+                                <rect key="frame" x="16" y="189" width="382" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="byH-O3-C2I">
-                                <rect key="frame" x="16" y="186" width="382" height="30"/>
+                                <rect key="frame" x="16" y="274" width="382" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4Y-tc-agd">
-                                <rect key="frame" x="16" y="276" width="382" height="30"/>
+                                <rect key="frame" x="16" y="364" width="382" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="clickedLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AeT-vg-7ZF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="התחברות" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR6-MD-ysI">
-                                <rect key="frame" x="175" y="40" width="64.5" height="21"/>
+                                <rect key="frame" x="175" y="128" width="64.5" height="21"/>
                                 <color key="tintColor" red="0.41568627450980394" green="0.31372549019607843" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.41568627450980394" green="0.31372549019607843" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA4-3I-oqj">
-                                <rect key="frame" x="178.5" y="694" width="57" height="30"/>
+                                <rect key="frame" x="178.5" y="782" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <segue destination="4dq-TA-rvq" kind="show" id="dOZ-0W-BCV"/>
@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1952" y="133"/>
         </scene>
         <!--Properties Table View Controller-->
         <scene sceneID="WfD-Mv-xuE">
@@ -192,39 +192,38 @@
             <objects>
                 <viewController id="4dq-TA-rvq" customClass="RegisterViewController" customModule="iOSFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gMB-Ti-GZK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PIl-vy-C5T">
-                                <rect key="frame" x="16" y="111" width="382" height="30"/>
+                                <rect key="frame" x="16" y="199" width="382" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pF0-jf-kv7">
-                                <rect key="frame" x="16" y="171" width="382" height="30"/>
+                                <rect key="frame" x="16" y="259" width="382" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M7z-Dn-NNr">
-                                <rect key="frame" x="16" y="241" width="382" height="30"/>
+                                <rect key="frame" x="16" y="329" width="382" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="הרשמה" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNm-s8-Zc5">
-                                <rect key="frame" x="181.5" y="40" width="51.5" height="21"/>
+                                <rect key="frame" x="181.5" y="128" width="51.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.41568627450000001" green="0.31372549020000001" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLV-hP-cOq">
-                                <rect key="frame" x="16" y="338" width="382" height="30"/>
+                                <rect key="frame" x="16" y="426" width="382" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="clickedRegister:" destination="4dq-TA-rvq" eventType="touchUpInside" id="2Fz-zs-vnG"/>
-                                    <segue destination="Jrm-Hb-TI4" kind="show" id="EhO-iH-Yrv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -252,37 +251,37 @@
                         <outlet property="passwordText" destination="pF0-jf-kv7" id="hSs-qm-0ZW"/>
                         <outlet property="repasswordText" destination="M7z-Dn-NNr" id="eDU-hN-YiJ"/>
                         <outlet property="userNameText" destination="PIl-vy-C5T" id="ze6-rX-jXE"/>
+                        <segue destination="Jrm-Hb-TI4" kind="show" identifier="showAppFromRegister" id="a1j-wc-nkQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z0a-Jb-ikA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1872.8" y="132.68365817091455"/>
+            <point key="canvasLocation" x="2782.608695652174" y="132.58928571428572"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="y6T-ns-ZO8">
+        <!--Splash View Controller-->
+        <scene sceneID="dv2-Tl-wwb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fcu-wQ-dWJ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="X2W-bl-aaq">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                <viewController id="sMV-Xa-RbR" customClass="SplashViewController" customModule="iOSFinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vQ6-by-gRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                        <viewLayoutGuide key="safeArea" id="rZu-Ic-oGJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="POP-l0-k66"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Rr4-68-qBM"/>
+                        <segue destination="Jrm-Hb-TI4" kind="show" identifier="showApp" id="OkU-VG-wPa"/>
+                        <segue destination="e0j-4z-emW" kind="show" identifier="showLogin" id="o7P-QY-OSF"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l5a-df-gaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="od1-rK-dLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+            <point key="canvasLocation" x="77" y="133"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--App Navigation Controller-->
         <scene sceneID="gvy-rQ-QEb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jrm-Hb-TI4" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jrm-Hb-TI4" userLabel="App Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6zh-bn-Idp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -297,9 +296,27 @@
             </objects>
             <point key="canvasLocation" x="137" y="976"/>
         </scene>
+        <!--Login Navigation Controller-->
+        <scene sceneID="XOm-xA-35S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e0j-4z-emW" userLabel="Login Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U7Y-Wo-c9f">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cUx-7S-rXj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3r-r1-gAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041" y="133"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EhO-iH-Yrv"/>
+        <segue reference="a1j-wc-nkQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.41568627450980394" green="0.31372549019607843" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

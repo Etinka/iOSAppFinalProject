@@ -14,10 +14,31 @@ extension UIButton {
     func setStyle(backgroundColor: UIColor = UIColor.appPink){
         self.layer.cornerRadius = 25
         self.clipsToBounds = true
-        self.backgroundColor = backgroundColor
         self.heightAnchor.constraint(equalToConstant: 50).isActive = true
         self.setTitleColor(UIColor.white, for: .normal)
         self.titleLabel?.font =  UIFont.boldSystemFont(ofSize: 18)
+        self.setBackgroundColor(color: backgroundColor, forState: .normal)
+        self.setBackgroundColor(color: backgroundColor, forState: .selected)
+    }
+    
+    func setBackgroundColor(color: UIColor, forState: UIControl.State) {
+        self.clipsToBounds = true  // add this to maintain corner radius
+        UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
+        if let context = UIGraphicsGetCurrentContext() {
+            context.setFillColor(color.cgColor)
+            context.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
+            let colorImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            self.setBackgroundImage(colorImage, for: forState)
+        }
+    }
+}
+
+extension UINavigationController {
+    
+    func setStyle(){
+        self.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationBar.barTintColor = UIColor.white
     }
 }
 

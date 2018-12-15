@@ -14,11 +14,12 @@ class BaseLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.setStyle()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         registerToAuthChanges()
+        
     }
     override func viewDidDisappear(_ animated: Bool) {
         unregisterToAuthChanges()

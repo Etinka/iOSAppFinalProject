@@ -11,7 +11,7 @@ import MaterialTextField
 
 class LoginViewController: BaseLoginViewController {
 
-    @IBOutlet weak var nameText: MFTextField!
+    @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
@@ -25,15 +25,14 @@ class LoginViewController: BaseLoginViewController {
     }
     
     override func notLoggedIn(error: String?) {
-//        showErrorAlert(title: "Sorry, login wasn't succesfull.")
+        showErrorAlert(title: "Sorry, login wasn't succesfull.")
     }
 
     @IBAction func clickedLogin(_ sender: Any) {
         NSLog("clickedLogin")
-        moveToApp()
-//        if let userName = nameText.text, let password = passwordText.text{
-//            Model.instance.signInUser(email: userName, password: password)
-//        }
+        if let userName = nameText.text, let password = passwordText.text{
+            Model.instance.signInUser(email: userName, password: password)
+        }
     }
     
 }

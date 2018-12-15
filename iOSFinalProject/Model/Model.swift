@@ -22,6 +22,10 @@ class Model{
         modelFirebase.stop()
     }
     
+    func isLoggedIn() -> Bool{
+       return modelFirebase.isUserLoggedIn()
+    }
+    
     func registerUser(email: String, password: String){
         modelFirebase.registerUser(email: email, password: password)
     }

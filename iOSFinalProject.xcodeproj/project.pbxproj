@@ -10,6 +10,7 @@
 		37AB249770D0A5BCE0BED21D /* Pods_iOSFinalProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F24B86CC23F03311A26B17 /* Pods_iOSFinalProjectTests.framework */; };
 		A51FDAEF21C4087400B4A7BD /* MaterialTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51FDAEE21C4087400B4A7BD /* MaterialTextField.framework */; };
 		A56BFF6021C4145E009F9D4F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56BFF5F21C4145E009F9D4F /* Extensions.swift */; };
+		A56C40A121C4F83100203A9B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C40A021C4F83100203A9B /* SplashViewController.swift */; };
 		A59545E721C3BCB800DFF43C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59545E621C3BCB800DFF43C /* AppDelegate.swift */; };
 		A59545EC21C3BCB800DFF43C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59545EA21C3BCB800DFF43C /* Main.storyboard */; };
 		A59545EF21C3BCB800DFF43C /* iOSFinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A59545ED21C3BCB800DFF43C /* iOSFinalProject.xcdatamodeld */; };
@@ -62,6 +63,7 @@
 		A51FDAED21C403C500B4A7BD /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A51FDAEE21C4087400B4A7BD /* MaterialTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MaterialTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56BFF5F21C4145E009F9D4F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A56C40A021C4F83100203A9B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		A59545E321C3BCB800DFF43C /* iOSFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59545E621C3BCB800DFF43C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A59545EB21C3BCB800DFF43C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				A595464221C3C4C300DFF43C /* BaseLoginViewController.swift */,
+				A56C40A021C4F83100203A9B /* SplashViewController.swift */,
 				A5F47F0121C3C73000A2AC48 /* LoginViewController.swift */,
 				A5F47F0221C3C73000A2AC48 /* RegisterViewController.swift */,
 				A595463021C3C10000DFF43C /* AddCommentViewController.swift */,
@@ -530,6 +533,7 @@
 				A595463421C3C10000DFF43C /* PropertiesTableViewController.swift in Sources */,
 				A595464A21C3C51600DFF43C /* NotificationService.swift in Sources */,
 				A595464521C3C4C300DFF43C /* BaseLoginViewController.swift in Sources */,
+				A56C40A121C4F83100203A9B /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

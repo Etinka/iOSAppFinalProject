@@ -14,7 +14,8 @@ class PropertiesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.setStyle()
+
         Model.instance.getAllProperties(callback: {(data:[Property]) in
             self.data = data
             self.tableView.reloadData()
