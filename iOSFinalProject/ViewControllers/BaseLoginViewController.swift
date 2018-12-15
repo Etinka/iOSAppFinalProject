@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import Material
 
 class BaseLoginViewController: UIViewController {
     
     private var notificationObserver: NSObjectProtocol?
+    
+    let initialPosition:CGFloat = 150
+    let gap: CGFloat = 80
+    let sideMargin: CGFloat = 16
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,5 +56,12 @@ class BaseLoginViewController: UIViewController {
         let alert = UIAlertController(title: title, message:nil, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func textIsEmail(sender: ErrorTextField){
+        sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
+        if let email = sender.text {
+            sender.isErrorRevealed =  !email.isEmpty && !email.isValidEmail()
+        }
     }
 }

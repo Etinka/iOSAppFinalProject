@@ -105,7 +105,13 @@ PODS:
   - gRPC-Core/Interface (1.14.0)
   - GTMSessionFetcher/Core (1.2.1)
   - leveldb-library (1.20)
-  - MaterialTextField (0.2.1)
+  - Material (2.16.4):
+    - Material/Core (= 2.16.4)
+  - Material/Core (2.16.4):
+    - Motion (~> 1.4.3)
+  - Motion (1.4.3):
+    - Motion/Core (= 1.4.3)
+  - Motion/Core (1.4.3)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -119,7 +125,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - FirebaseUI/Auth
   - FirebaseUI/Phone
-  - MaterialTextField (~> 0.2)
+  - Material (~> 2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -139,7 +145,8 @@ SPEC REPOS:
     - gRPC-Core
     - GTMSessionFetcher
     - leveldb-library
-    - MaterialTextField
+    - Material
+    - Motion
     - nanopb
     - Protobuf
 
@@ -160,10 +167,11 @@ SPEC CHECKSUMS:
   gRPC-Core: f4836515817c0eb479aeeb9cc27c91c4ba62a9f6
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
-  MaterialTextField: f876a39d571eeece872af6a4da421e3bd065fe0b
+  Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
+  Motion: 153ba49692997888556c7a95207278a8b1f8be95
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: f955adbde972f134f695dd499d4b154da4b0d6ff
+PODFILE CHECKSUM: 31930d7eea5c2fe9f3c83fc21890ed3cf40ad68b
 
 COCOAPODS: 1.5.3

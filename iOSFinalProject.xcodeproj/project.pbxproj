@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		37AB249770D0A5BCE0BED21D /* Pods_iOSFinalProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F24B86CC23F03311A26B17 /* Pods_iOSFinalProjectTests.framework */; };
-		A51FDAEF21C4087400B4A7BD /* MaterialTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51FDAEE21C4087400B4A7BD /* MaterialTextField.framework */; };
-		A56BFF6021C4145E009F9D4F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56BFF5F21C4145E009F9D4F /* Extensions.swift */; };
+		A56BFF6021C4145E009F9D4F /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56BFF5F21C4145E009F9D4F /* UIExtensions.swift */; };
 		A56C40A121C4F83100203A9B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C40A021C4F83100203A9B /* SplashViewController.swift */; };
+		A57A633F21C51BCB00E836B0 /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57A633E21C51BCB00E836B0 /* Material.framework */; };
+		A57A634121C5283100E836B0 /* GeneralExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A634021C5283100E836B0 /* GeneralExtensions.swift */; };
 		A59545E721C3BCB800DFF43C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59545E621C3BCB800DFF43C /* AppDelegate.swift */; };
 		A59545EC21C3BCB800DFF43C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59545EA21C3BCB800DFF43C /* Main.storyboard */; };
 		A59545EF21C3BCB800DFF43C /* iOSFinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A59545ED21C3BCB800DFF43C /* iOSFinalProject.xcdatamodeld */; };
@@ -61,9 +62,10 @@
 		8058B001FE24BC0A351DC5B7 /* Pods-iOSFinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFinalProject/Pods-iOSFinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		A51FDAEC21C403C400B4A7BD /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Main.strings; sourceTree = "<group>"; };
 		A51FDAED21C403C500B4A7BD /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		A51FDAEE21C4087400B4A7BD /* MaterialTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MaterialTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A56BFF5F21C4145E009F9D4F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A56BFF5F21C4145E009F9D4F /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		A56C40A021C4F83100203A9B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		A57A633E21C51BCB00E836B0 /* Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Material.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A57A634021C5283100E836B0 /* GeneralExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralExtensions.swift; sourceTree = "<group>"; };
 		A59545E321C3BCB800DFF43C /* iOSFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59545E621C3BCB800DFF43C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A59545EB21C3BCB800DFF43C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51FDAEF21C4087400B4A7BD /* MaterialTextField.framework in Frameworks */,
+				A57A633F21C51BCB00E836B0 /* Material.framework in Frameworks */,
 				B659C42C038E712E758F1388 /* Pods_iOSFinalProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +142,8 @@
 		A56BFF5E21C4144A009F9D4F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A56BFF5F21C4145E009F9D4F /* Extensions.swift */,
+				A56BFF5F21C4145E009F9D4F /* UIExtensions.swift */,
+				A57A634021C5283100E836B0 /* GeneralExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -240,7 +243,7 @@
 		EB853B53EC40859895B98D2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A51FDAEE21C4087400B4A7BD /* MaterialTextField.framework */,
+				A57A633E21C51BCB00E836B0 /* Material.framework */,
 				4973A371684EFF561252B252 /* Pods_iOSFinalProject.framework */,
 				B7F24B86CC23F03311A26B17 /* Pods_iOSFinalProjectTests.framework */,
 				FC04051FF014191DF1C76E7E /* Pods_iOSFinalProjectUITests.framework */,
@@ -441,7 +444,8 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/MaterialTextField/MaterialTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -455,7 +459,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -520,6 +525,7 @@
 			files = (
 				A595463A21C3C10F00DFF43C /* Property.swift in Sources */,
 				A59545EF21C3BCB800DFF43C /* iOSFinalProject.xcdatamodeld in Sources */,
+				A57A634121C5283100E836B0 /* GeneralExtensions.swift in Sources */,
 				A595463C21C3C10F00DFF43C /* Model.swift in Sources */,
 				A595463B21C3C10F00DFF43C /* FirebaseModel.swift in Sources */,
 				A595463321C3C10000DFF43C /* PropertyViewController.swift in Sources */,
@@ -528,7 +534,7 @@
 				A595462C21C3C0D900DFF43C /* PropertyTableViewCell.swift in Sources */,
 				A59545E721C3BCB800DFF43C /* AppDelegate.swift in Sources */,
 				A5F47F0321C3C73100A2AC48 /* LoginViewController.swift in Sources */,
-				A56BFF6021C4145E009F9D4F /* Extensions.swift in Sources */,
+				A56BFF6021C4145E009F9D4F /* UIExtensions.swift in Sources */,
 				A5F47F0421C3C73100A2AC48 /* RegisterViewController.swift in Sources */,
 				A595463421C3C10000DFF43C /* PropertiesTableViewController.swift in Sources */,
 				A595464A21C3C51600DFF43C /* NotificationService.swift in Sources */,

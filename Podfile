@@ -15,7 +15,7 @@ target 'iOSFinalProject' do
   pod 'FirebaseUI/Phone'
   
   #UI
-  pod 'MaterialTextField', '~> 0.2'
+  pod 'Material', '~> 2.0'
 
   
   target 'iOSFinalProjectTests' do
