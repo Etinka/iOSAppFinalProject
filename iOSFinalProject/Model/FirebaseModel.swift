@@ -22,7 +22,6 @@ class FirebaseModel{
         FirebaseApp.configure()
         db = Firestore.firestore()
         propertiesCollection = db.collection("properties")
-        logout()
     }
     
     func start(){

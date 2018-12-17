@@ -13,9 +13,9 @@ import Material
 extension UIButton {
     
     func setStyle(backgroundColor: UIColor = UIColor.appPink){
-        self.layer.cornerRadius = 25
+        self.layer.cornerRadius = 22
         self.clipsToBounds = true
-        self.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        self.heightAnchor.constraint(equalToConstant: 44).isActive = true
         self.setTitleColor(UIColor.white, for: .normal)
         self.titleLabel?.font =  UIFont.boldSystemFont(ofSize: 18)
         self.setBackgroundColor(color: backgroundColor, forState: .normal)
@@ -59,6 +59,7 @@ extension TextField{
         self.dividerActiveColor = UIColor.appPurple
         self.visibilityIconButton?.tintColor = UIColor.appPurple.withAlphaComponent(self.isSecureTextEntry ? 0.38 : 0.54)
         self.clearButtonMode = .whileEditing
+        self.font = UIFont.systemFont(ofSize: 12, weight: .light)
     }
     
     func setPasswordStyle(){

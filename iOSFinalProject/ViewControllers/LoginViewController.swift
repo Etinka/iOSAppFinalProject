@@ -11,15 +11,17 @@ import Material
 
 class LoginViewController: BaseLoginViewController {
 
+    let initialPosition:CGFloat = 260
+
     @IBOutlet weak var loginButton: UIButton!
     fileprivate var passwordField: TextField!
     fileprivate var emailField: ErrorTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.title = ""
         loginButton.setStyle()
         loginButton.isEnabled = false
-        self.navigationController?.title = ""
         preparePasswordField()
         prepareEmailField()
         setupAddTargetIsNotEmptyTextFields()

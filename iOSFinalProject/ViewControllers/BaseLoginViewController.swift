@@ -13,9 +13,8 @@ class BaseLoginViewController: UIViewController {
     
     private var notificationObserver: NSObjectProtocol?
     
-    let initialPosition:CGFloat = 150
-    let gap: CGFloat = 80
-    let sideMargin: CGFloat = 16
+    let gap: CGFloat = 55
+    let sideMargin: CGFloat = 25
     
     override func viewDidLoad() {
         super.viewDidLoad()

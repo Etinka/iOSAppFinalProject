@@ -10,7 +10,9 @@ import UIKit
 import Material
 
 class RegisterViewController: BaseLoginViewController {
-    
+
+    let initialPosition:CGFloat = 220
+
     @IBOutlet weak var btnRegister: UIButton!
     
     fileprivate var rePasswordField: TextField!
