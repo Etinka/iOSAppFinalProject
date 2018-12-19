@@ -11,10 +11,11 @@ import UIKit
 class PropertiesTableViewController: UITableViewController {
     var data = [Property]()
     var selectedProperty:Property?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setStyle()
+        self.title = "גג"
+        self.setNavigationController()
 
         Model.instance.getAllProperties(callback: {(data:[Property]) in
             self.data = data
@@ -55,7 +56,7 @@ class PropertiesTableViewController: UITableViewController {
             let propertyDetailsVc:PropertyViewController = segue.destination as! PropertyViewController
             propertyDetailsVc.property = self.selectedProperty
         }
-    
+        
     }
     
 }

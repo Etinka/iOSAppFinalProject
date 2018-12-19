@@ -16,6 +16,8 @@ class PropertyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setNavigationController()
+
         if property != nil {
             title = property?.address
             addressLabel.text = property?.address
