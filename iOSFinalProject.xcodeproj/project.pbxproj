@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37AB249770D0A5BCE0BED21D /* Pods_iOSFinalProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F24B86CC23F03311A26B17 /* Pods_iOSFinalProjectTests.framework */; };
+		84EC44FA21CE561900F9FCC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84EC44F921CE561900F9FCC4 /* GoogleService-Info.plist */; };
 		A537209321CA77BF00613145 /* Heebo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537208C21CA77BE00613145 /* Heebo-Regular.ttf */; };
 		A537209421CA77C000613145 /* Heebo-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537208D21CA77BE00613145 /* Heebo-ExtraBold.ttf */; };
 		A537209521CA77C000613145 /* Heebo-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537208E21CA77BE00613145 /* Heebo-Thin.ttf */; };
@@ -15,7 +16,6 @@
 		A537209721CA77C000613145 /* Heebo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537209021CA77BF00613145 /* Heebo-Medium.ttf */; };
 		A537209821CA77C000613145 /* Heebo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537209121CA77BF00613145 /* Heebo-Black.ttf */; };
 		A537209921CA77C000613145 /* Heebo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537209221CA77BF00613145 /* Heebo-Bold.ttf */; };
-		A5428CC521C816AE00A37FE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5428CC421C816AD00A37FE4 /* GoogleService-Info.plist */; };
 		A56BFF6021C4145E009F9D4F /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56BFF5F21C4145E009F9D4F /* UIExtensions.swift */; };
 		A56C40A121C4F83100203A9B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C40A021C4F83100203A9B /* SplashViewController.swift */; };
 		A57A633F21C51BCB00E836B0 /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57A633E21C51BCB00E836B0 /* Material.framework */; };
@@ -67,6 +67,7 @@
 		5D6CD3B03CB718E981DAA19D /* Pods-iOSFinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFinalProject/Pods-iOSFinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		782D1E43A0827C2399B9B526 /* Pods-iOSFinalProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFinalProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFinalProjectUITests/Pods-iOSFinalProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8058B001FE24BC0A351DC5B7 /* Pods-iOSFinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFinalProject/Pods-iOSFinalProject.release.xcconfig"; sourceTree = "<group>"; };
+		84EC44F921CE561900F9FCC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A51FDAEC21C403C400B4A7BD /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Main.strings; sourceTree = "<group>"; };
 		A51FDAED21C403C500B4A7BD /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A537208C21CA77BE00613145 /* Heebo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Regular.ttf"; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		A537209021CA77BF00613145 /* Heebo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Medium.ttf"; sourceTree = "<group>"; };
 		A537209121CA77BF00613145 /* Heebo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Black.ttf"; sourceTree = "<group>"; };
 		A537209221CA77BF00613145 /* Heebo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Bold.ttf"; sourceTree = "<group>"; };
-		A5428CC421C816AD00A37FE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A56BFF5F21C4145E009F9D4F /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		A56C40A021C4F83100203A9B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		A57A633E21C51BCB00E836B0 /* Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Material.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +209,7 @@
 		A59545E521C3BCB800DFF43C /* iOSFinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				84EC44F921CE561900F9FCC4 /* GoogleService-Info.plist */,
 				A537207C21CA774900613145 /* Resources */,
 				A56BFF5E21C4144A009F9D4F /* Extensions */,
 				A595462A21C3C0C400DFF43C /* Cells */,
@@ -219,7 +220,6 @@
 				A59545F021C3BCB900DFF43C /* Assets.xcassets */,
 				A59545F221C3BCB900DFF43C /* LaunchScreen.storyboard */,
 				A59545F521C3BCB900DFF43C /* Info.plist */,
-				A5428CC421C816AD00A37FE4 /* GoogleService-Info.plist */,
 				A59545ED21C3BCB800DFF43C /* iOSFinalProject.xcdatamodeld */,
 			);
 			path = iOSFinalProject;
@@ -399,13 +399,13 @@
 			files = (
 				A537209321CA77BF00613145 /* Heebo-Regular.ttf in Resources */,
 				A59545F421C3BCB900DFF43C /* LaunchScreen.storyboard in Resources */,
-				A5428CC521C816AE00A37FE4 /* GoogleService-Info.plist in Resources */,
 				A537209621CA77C000613145 /* Heebo-Light.ttf in Resources */,
 				A59545F121C3BCB900DFF43C /* Assets.xcassets in Resources */,
 				A537209421CA77C000613145 /* Heebo-ExtraBold.ttf in Resources */,
 				A537209821CA77C000613145 /* Heebo-Black.ttf in Resources */,
 				A537209721CA77C000613145 /* Heebo-Medium.ttf in Resources */,
 				A537209521CA77C000613145 /* Heebo-Thin.ttf in Resources */,
+				84EC44FA21CE561900F9FCC4 /* GoogleService-Info.plist in Resources */,
 				A537209921CA77C000613145 /* Heebo-Bold.ttf in Resources */,
 				A59545EC21C3BCB800DFF43C /* Main.storyboard in Resources */,
 			);
@@ -767,6 +767,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AQJ33WJLV6;
 				INFOPLIST_FILE = iOSFinalProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -786,6 +787,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AQJ33WJLV6;
 				INFOPLIST_FILE = iOSFinalProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
