@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sMV-Xa-RbR">
-    <device id="retina6_1" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sMV-Xa-RbR">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,37 +16,37 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="iOSFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4Y-tc-agd">
-                                <rect key="frame" x="25" y="424" width="364" height="30"/>
+                                <rect key="frame" x="25" y="424" width="325" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="clickedLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AeT-vg-7ZF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR6-MD-ysI">
-                                <rect key="frame" x="161" y="128" width="92.5" height="35.5"/>
+                                <rect key="frame" x="142" y="104" width="91" height="28"/>
                                 <color key="tintColor" red="0.41568627450980394" green="0.31372549019607843" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="התחברות">
                                         <attributes>
                                             <color key="NSColor" red="0.41568627450980394" green="0.31372549019607843" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="24" name="Heebo-Medium"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cA4-3I-oqj">
-                                <rect key="frame" x="147" y="806.5" width="120" height="35.5"/>
+                                <rect key="frame" x="130" y="616" width="115" height="31"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="לא רשום? לחץ כאן">
                                             <attributes>
                                                 <color key="NSColor" red="0.41568627450980394" green="0.31372549019607843" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="16" name="Heebo-Light"/>
+                                                <font key="NSFont" metaFont="system" size="16"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -55,7 +57,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GagLogo" translatesAutoresizingMaskIntoConstraints="NO" id="6n8-lg-tDG">
-                                <rect key="frame" x="184" y="730.5" width="46" height="42"/>
+                                <rect key="frame" x="164.5" y="540" width="46" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="6Gw-Yt-Q9A"/>
                                     <constraint firstAttribute="width" constant="46" id="v5b-1L-LTU"/>
@@ -94,41 +96,41 @@
             <objects>
                 <tableViewController id="zH1-PS-Cck" customClass="PropertiesTableViewController" customModule="iOSFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dpF-a6-nEc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="PropertyCell" rowHeight="167" id="XYX-L8-as0" customClass="PropertyTableViewCell" customModule="iOSFinalProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="167"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="167"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XYX-L8-as0" id="ifw-gB-XVm">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="166.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="166.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="House" translatesAutoresizingMaskIntoConstraints="NO" id="SZk-gu-opf">
-                                            <rect key="frame" x="20" y="26.5" width="114" height="114"/>
+                                            <rect key="frame" x="16" y="26.5" width="114" height="114"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="114" id="7QB-Xo-1cu"/>
                                                 <constraint firstAttribute="height" constant="114" id="aXH-Kx-zab"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YxM-sK-eKY">
-                                            <rect key="frame" x="164" y="52.5" width="210" height="61.5"/>
+                                            <rect key="frame" x="160" y="52.5" width="179" height="61.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwq-15-daC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="210" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="179" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuZ-9g-PgA">
-                                                    <rect key="frame" x="0.0" y="20.5" width="210" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="20.5" width="179" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ec4-Jt-c6e">
-                                                    <rect key="frame" x="0.0" y="41" width="210" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="41" width="179" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -173,29 +175,17 @@
             <objects>
                 <viewController id="FVg-Yy-l9b" customClass="PropertyViewController" customModule="iOSFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0CN-iE-rqd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מחיר" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3I-8h-SiO">
-                                <rect key="frame" x="20" y="421" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מספר חדרים" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rB-V9-cat">
-                                <rect key="frame" x="20" y="457" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="House" translatesAutoresizingMaskIntoConstraints="NO" id="Aeo-vr-2IC">
-                                <rect key="frame" x="0.0" y="140" width="414" height="271"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="271"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="271" id="uYA-2f-dtd"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-SS-7ja">
-                                <rect key="frame" x="72" y="531" width="270" height="30"/>
+                                <rect key="frame" x="72" y="509.5" width="231" height="30"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="הוסף">
@@ -222,28 +212,63 @@
                                     <segue destination="Omh-cY-OPd" kind="show" id="la4-0a-OZ3"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bgf-Pj-yvq">
+                                <rect key="frame" x="20" y="397" width="335" height="102.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מחיר" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3I-8h-SiO">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מספר חדרים" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rB-V9-cat">
+                                        <rect key="frame" x="0.0" y="20.5" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="קומה" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hh-mB-Lrg">
+                                        <rect key="frame" x="0.0" y="41" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מעלית" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMe-TH-xB6">
+                                        <rect key="frame" x="0.0" y="61.5" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ממ״ד" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDa-cF-WbZ">
+                                        <rect key="frame" x="0.0" y="82" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZcF-SS-7ja" firstAttribute="top" secondItem="4rB-V9-cat" secondAttribute="bottom" constant="53" id="5T3-Mg-9Dr"/>
-                            <constraint firstItem="4rB-V9-cat" firstAttribute="leading" secondItem="1dK-i8-E3W" secondAttribute="leading" constant="20" id="E8s-sb-Dhk"/>
                             <constraint firstItem="ZcF-SS-7ja" firstAttribute="leading" secondItem="1dK-i8-E3W" secondAttribute="leading" constant="72" id="FnI-hB-0fh"/>
-                            <constraint firstItem="N3I-8h-SiO" firstAttribute="top" secondItem="Aeo-vr-2IC" secondAttribute="bottom" constant="10" id="Hmr-BN-fLo"/>
-                            <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" secondItem="N3I-8h-SiO" secondAttribute="trailing" constant="20" id="TDH-gA-2II"/>
+                            <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" secondItem="bgf-Pj-yvq" secondAttribute="trailing" constant="20" id="Fyn-zx-NBS"/>
                             <constraint firstItem="Aeo-vr-2IC" firstAttribute="trailing" secondItem="1dK-i8-E3W" secondAttribute="trailing" id="V1O-kl-Pd4"/>
-                            <constraint firstItem="N3I-8h-SiO" firstAttribute="leading" secondItem="1dK-i8-E3W" secondAttribute="leading" constant="20" id="VOm-6L-DuL"/>
                             <constraint firstItem="Aeo-vr-2IC" firstAttribute="leading" secondItem="1dK-i8-E3W" secondAttribute="leading" id="afN-x7-Wsh"/>
-                            <constraint firstItem="4rB-V9-cat" firstAttribute="top" secondItem="N3I-8h-SiO" secondAttribute="bottom" constant="15" id="j0v-S0-15o"/>
-                            <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" secondItem="4rB-V9-cat" secondAttribute="trailing" constant="20" id="tgK-SQ-k6A"/>
+                            <constraint firstItem="bgf-Pj-yvq" firstAttribute="top" secondItem="Aeo-vr-2IC" secondAttribute="bottom" constant="10" id="efH-Ws-gVL"/>
+                            <constraint firstItem="bgf-Pj-yvq" firstAttribute="leading" secondItem="1dK-i8-E3W" secondAttribute="leading" constant="20" id="mNJ-VO-CW5"/>
                             <constraint firstItem="Aeo-vr-2IC" firstAttribute="top" secondItem="1dK-i8-E3W" secondAttribute="top" id="uCj-Xz-yMO"/>
                             <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" secondItem="ZcF-SS-7ja" secondAttribute="trailing" constant="72" id="vQu-qp-EjW"/>
+                            <constraint firstItem="ZcF-SS-7ja" firstAttribute="top" secondItem="bgf-Pj-yvq" secondAttribute="bottom" constant="10" id="zYI-Ze-0Tw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1dK-i8-E3W"/>
                     </view>
                     <connections>
+                        <outlet property="elevatorLabel" destination="BMe-TH-xB6" id="GhK-lG-vv9"/>
+                        <outlet property="floorLabel" destination="4hh-mB-Lrg" id="1tI-VB-aBT"/>
                         <outlet property="numberOfRoomsLabel" destination="4rB-V9-cat" id="Qm3-nC-K0x"/>
                         <outlet property="priceLabel" destination="N3I-8h-SiO" id="w08-pw-Wni"/>
                         <outlet property="propertyImage" destination="Aeo-vr-2IC" id="69K-OY-nkN"/>
+                        <outlet property="safeRoomLabel" destination="wDa-cF-WbZ" id="Ns6-Gi-AV0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWN-29-CWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -255,7 +280,7 @@
             <objects>
                 <viewController id="Omh-cY-OPd" customClass="AddCommentViewController" customModule="iOSFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oTd-wl-6Jn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="v3S-kP-P0O"/>
@@ -270,30 +295,30 @@
             <objects>
                 <viewController id="4dq-TA-rvq" customClass="RegisterViewController" customModule="iOSFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gMB-Ti-GZK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNm-s8-Zc5">
-                                <rect key="frame" x="168.5" y="128" width="77" height="35.5"/>
+                                <rect key="frame" x="151.5" y="104" width="72.5" height="28"/>
                                 <attributedString key="attributedText">
                                     <fragment content="הרשמה">
                                         <attributes>
                                             <color key="NSColor" red="0.41568627450980394" green="0.31372549019607843" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="24" name="Heebo-Medium"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLV-hP-cOq">
-                                <rect key="frame" x="25" y="632" width="364" height="30"/>
+                                <rect key="frame" x="25" y="437" width="325" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="clickedRegister:" destination="4dq-TA-rvq" eventType="touchUpInside" id="2Fz-zs-vnG"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GagLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dUh-sU-dlv">
-                                <rect key="frame" x="184" y="780" width="46" height="42"/>
+                                <rect key="frame" x="164.5" y="585" width="46" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="hR6-Ow-QBz"/>
                                     <constraint firstAttribute="width" constant="46" id="jx1-eL-ARD"/>
@@ -326,11 +351,11 @@
             <objects>
                 <viewController id="sMV-Xa-RbR" customClass="SplashViewController" customModule="iOSFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vQ6-by-gRQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GagLogo" translatesAutoresizingMaskIntoConstraints="NO" id="cb6-FQ-oPl">
-                                <rect key="frame" x="142" y="387.5" width="130" height="121"/>
+                                <rect key="frame" x="122.5" y="273" width="130" height="121"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="IJS-nC-tpZ"/>
                                     <constraint firstAttribute="height" constant="121" id="V5x-6u-Q4C"/>
@@ -360,7 +385,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jrm-Hb-TI4" userLabel="App Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6zh-bn-Idp">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -378,7 +403,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e0j-4z-emW" userLabel="Login Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U7Y-Wo-c9f">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

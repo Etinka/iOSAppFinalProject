@@ -13,6 +13,9 @@ class PropertyViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var numberOfRoomsLabel: UILabel!
     @IBOutlet weak var propertyImage: UIImageView!
+    @IBOutlet weak var safeRoomLabel: UILabel!
+    @IBOutlet weak var floorLabel: UILabel!
+    @IBOutlet weak var elevatorLabel: UILabel!
     
     var propertyId:Int?
     var property:Property?
@@ -25,6 +28,21 @@ class PropertyViewController: UIViewController {
             title = prop.address
             priceLabel.text = "\(prop.price) ש״ח"
             numberOfRoomsLabel.text = "מספר חדרים: \(prop.numberOfRooms)"
+            floorLabel.text = "קומה: \(prop.floor)"
+            let hasElevator = prop.elevator;
+            if hasElevator {
+                elevatorLabel.text = "מעלית: V"
+            }
+            else {
+                elevatorLabel.text = "מעלית: X"
+            }
+            let hasSafeRoom = prop.safeRoom;
+            if hasSafeRoom {
+                safeRoomLabel.text = "ממ״ד: V"
+            }
+            else {
+                safeRoomLabel.text = "ממ״ד: X"
+            }
             if prop.imageUrl != "" {
                 Model.instance.getImage(url: prop.imageUrl) {(image:UIImage?) in
                     if image != nil {
