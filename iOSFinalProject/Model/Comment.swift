@@ -11,9 +11,11 @@ import Foundation
 class Comment{
     var text: String?
     var imageUrl: String?
+    var userUid:String?
     
-    init(_text: String?, _imageUrl: String?) {
+    init(_text: String?, _imageUrl: String?, _userUid: String?) {
         self.text = _text
         self.imageUrl = _imageUrl
+        self.userUid = _userUid
     }
 }

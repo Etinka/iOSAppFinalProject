@@ -28,7 +28,8 @@ class PropertyViewController: UIViewController {
             if prop.imageUrl != "" {
                 Model.instance.getImage(url: prop.imageUrl) {(image:UIImage?) in
                     if image != nil {
-                        self.propertyImage.image = image!
+                        let resizedImage = image?.resize(toHeight: 120)
+                        self.propertyImage.image = resizedImage
                     }
                 }
             }

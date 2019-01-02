@@ -46,8 +46,10 @@ class PropertiesTableViewController: UITableViewController {
         if st.imageUrl != "" {
             Model.instance.getImage(url: st.imageUrl) { (image:UIImage?) in
                 if (cell.imageView!.tag == indexPath.row){
+                    cell.imageView?.image = nil
                     if image != nil {
-                        cell.imageView?.image = image!
+                        let resizedImage = image?.resize(toHeight: 120)
+                        cell.imageView?.image = resizedImage?.resize(toWidth: 120)
                     }
                 }
             }
