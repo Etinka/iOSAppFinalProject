@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -99,28 +98,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="PropertyCell" rowHeight="80" id="XYX-L8-as0" customClass="PropertyTableViewCell" customModule="iOSFinalProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="PropertyCell" rowHeight="167" id="XYX-L8-as0" customClass="PropertyTableViewCell" customModule="iOSFinalProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="167"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XYX-L8-as0" id="ifw-gB-XVm" customClass="PropertyTableViewCell" customModule="iOSFinalProject" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XYX-L8-as0" id="ifw-gB-XVm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="166.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwq-15-daC">
-                                            <rect key="frame" x="36" y="29.5" width="342" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="House" translatesAutoresizingMaskIntoConstraints="NO" id="SZk-gu-opf">
+                                            <rect key="frame" x="20" y="26.5" width="114" height="114"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="114" id="7QB-Xo-1cu"/>
+                                                <constraint firstAttribute="height" constant="114" id="aXH-Kx-zab"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YxM-sK-eKY">
+                                            <rect key="frame" x="164" y="52.5" width="210" height="61.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwq-15-daC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="210" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuZ-9g-PgA">
+                                                    <rect key="frame" x="0.0" y="20.5" width="210" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ec4-Jt-c6e">
+                                                    <rect key="frame" x="0.0" y="41" width="210" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Uwq-15-daC" firstAttribute="centerY" secondItem="ifw-gB-XVm" secondAttribute="centerY" id="Emo-3G-R16"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Uwq-15-daC" secondAttribute="trailing" constant="16" id="Hx8-7t-X36"/>
-                                        <constraint firstItem="Uwq-15-daC" firstAttribute="leading" secondItem="ifw-gB-XVm" secondAttribute="leadingMargin" constant="16" id="RI5-Dh-mJs"/>
+                                        <constraint firstItem="SZk-gu-opf" firstAttribute="centerY" secondItem="ifw-gB-XVm" secondAttribute="centerY" id="MAg-GB-2pO"/>
+                                        <constraint firstItem="YxM-sK-eKY" firstAttribute="leading" secondItem="SZk-gu-opf" secondAttribute="trailing" constant="30" id="cap-1P-C2O"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="YxM-sK-eKY" secondAttribute="trailing" constant="20" id="fyC-jd-uFp"/>
+                                        <constraint firstItem="SZk-gu-opf" firstAttribute="leading" secondItem="ifw-gB-XVm" secondAttribute="leadingMargin" id="o1a-wZ-5Sn"/>
+                                        <constraint firstItem="YxM-sK-eKY" firstAttribute="centerY" secondItem="ifw-gB-XVm" secondAttribute="centerY" id="qvZ-n1-0f9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="Uwq-15-daC" id="4Hr-x4-wDG"/>
+                                    <outlet property="numOfRoomsLabel" destination="ec4-Jt-c6e" id="AFJ-Tx-GjB"/>
+                                    <outlet property="priceLabel" destination="IuZ-9g-PgA" id="yfr-HI-WHn"/>
+                                    <outlet property="propertyImage" destination="SZk-gu-opf" id="NNw-6o-Fny"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -138,7 +166,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7v-yc-gOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041" y="976"/>
+            <point key="canvasLocation" x="1039.1304347826087" y="975.66964285714278"/>
         </scene>
         <!--Property View Controller-->
         <scene sceneID="5lD-W4-6Go">
@@ -148,15 +176,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkP-SB-pSJ">
-                                <rect key="frame" x="16" y="180" width="382" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מחיר" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3I-8h-SiO">
+                                <rect key="frame" x="20" y="421" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-SS-7ja">
-                                <rect key="frame" x="201" y="476" width="96" height="30"/>
-                                <state key="normal" title="Add comment"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מספר חדרים" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rB-V9-cat">
+                                <rect key="frame" x="20" y="457" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="House" translatesAutoresizingMaskIntoConstraints="NO" id="Aeo-vr-2IC">
+                                <rect key="frame" x="0.0" y="140" width="414" height="271"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="271" id="uYA-2f-dtd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-SS-7ja">
+                                <rect key="frame" x="72" y="531" width="270" height="30"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="הוסף">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name=".ArialHebrewDeskInterface"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" ">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="תגובה">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name=".ArialHebrewDeskInterface"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <segue destination="Omh-cY-OPd" kind="show" id="la4-0a-OZ3"/>
                                 </connections>
@@ -164,17 +225,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1dK-i8-E3W" firstAttribute="bottom" secondItem="ZcF-SS-7ja" secondAttribute="bottom" constant="356" id="Bi8-Gn-NAN"/>
-                            <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" secondItem="ZcF-SS-7ja" secondAttribute="trailing" constant="117" id="GPY-1A-4lm"/>
-                            <constraint firstItem="ZcF-SS-7ja" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1dK-i8-E3W" secondAttribute="leading" id="GTl-Ns-Scd"/>
-                            <constraint firstItem="TkP-SB-pSJ" firstAttribute="top" secondItem="1dK-i8-E3W" secondAttribute="top" constant="40" id="dQ6-dl-Bk1"/>
-                            <constraint firstItem="TkP-SB-pSJ" firstAttribute="centerX" secondItem="0CN-iE-rqd" secondAttribute="centerX" id="gPh-3z-XK3"/>
-                            <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" secondItem="TkP-SB-pSJ" secondAttribute="trailing" constant="16" id="qPw-Mo-Ket"/>
+                            <constraint firstItem="ZcF-SS-7ja" firstAttribute="top" secondItem="4rB-V9-cat" secondAttribute="bottom" constant="53" id="5T3-Mg-9Dr"/>
+                            <constraint firstItem="4rB-V9-cat" firstAttribute="leading" secondItem="1dK-i8-E3W" secondAttribute="leading" constant="20" id="E8s-sb-Dhk"/>
+                            <constraint firstItem="ZcF-SS-7ja" firstAttribute="leading" secondItem="1dK-i8-E3W" secondAttribute="leading" constant="72" id="FnI-hB-0fh"/>
+                            <constraint firstItem="N3I-8h-SiO" firstAttribute="top" secondItem="Aeo-vr-2IC" secondAttribute="bottom" constant="10" id="Hmr-BN-fLo"/>
+                            <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" secondItem="N3I-8h-SiO" secondAttribute="trailing" constant="20" id="TDH-gA-2II"/>
+                            <constraint firstItem="Aeo-vr-2IC" firstAttribute="trailing" secondItem="1dK-i8-E3W" secondAttribute="trailing" id="V1O-kl-Pd4"/>
+                            <constraint firstItem="N3I-8h-SiO" firstAttribute="leading" secondItem="1dK-i8-E3W" secondAttribute="leading" constant="20" id="VOm-6L-DuL"/>
+                            <constraint firstItem="Aeo-vr-2IC" firstAttribute="leading" secondItem="1dK-i8-E3W" secondAttribute="leading" id="afN-x7-Wsh"/>
+                            <constraint firstItem="4rB-V9-cat" firstAttribute="top" secondItem="N3I-8h-SiO" secondAttribute="bottom" constant="15" id="j0v-S0-15o"/>
+                            <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" secondItem="4rB-V9-cat" secondAttribute="trailing" constant="20" id="tgK-SQ-k6A"/>
+                            <constraint firstItem="Aeo-vr-2IC" firstAttribute="top" secondItem="1dK-i8-E3W" secondAttribute="top" id="uCj-Xz-yMO"/>
+                            <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" secondItem="ZcF-SS-7ja" secondAttribute="trailing" constant="72" id="vQu-qp-EjW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1dK-i8-E3W"/>
                     </view>
                     <connections>
-                        <outlet property="addressLabel" destination="TkP-SB-pSJ" id="A1K-SJ-HCe"/>
+                        <outlet property="numberOfRoomsLabel" destination="4rB-V9-cat" id="Qm3-nC-K0x"/>
+                        <outlet property="priceLabel" destination="N3I-8h-SiO" id="w08-pw-Wni"/>
+                        <outlet property="propertyImage" destination="Aeo-vr-2IC" id="69K-OY-nkN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWN-29-CWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -324,6 +393,7 @@
     </scenes>
     <resources>
         <image name="GagLogo" width="130" height="121"/>
+        <image name="House" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="a1j-wc-nkQ"/>

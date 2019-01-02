@@ -38,6 +38,21 @@ class PropertiesTableViewController: UITableViewController {
         
         let st = data[indexPath.row]
         cell.addressLabel.text = st.address
+        cell.priceLabel.text = "\(st.price) ש״ח"
+        cell.numOfRoomsLabel.text = "מספר חדרים: \(st.numberOfRooms)"
+        
+        cell.imageView!.tag = indexPath.row
+        cell.imageView?.contentMode = .scaleAspectFit
+        if st.imageUrl != "" {
+            Model.instance.getImage(url: st.imageUrl) { (image:UIImage?) in
+                if (cell.imageView!.tag == indexPath.row){
+                    if image != nil {
+                        cell.imageView?.image = image!
+                    }
+                }
+            }
+            
+        }
         
         return cell
     }
@@ -49,8 +64,9 @@ class PropertiesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 130
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PropertyDetailsView"{
             let propertyDetailsVc:PropertyViewController = segue.destination as! PropertyViewController

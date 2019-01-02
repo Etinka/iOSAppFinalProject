@@ -16,6 +16,7 @@
 		A537209721CA77C000613145 /* Heebo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537209021CA77BF00613145 /* Heebo-Medium.ttf */; };
 		A537209821CA77C000613145 /* Heebo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537209121CA77BF00613145 /* Heebo-Black.ttf */; };
 		A537209921CA77C000613145 /* Heebo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537209221CA77BF00613145 /* Heebo-Bold.ttf */; };
+		A557807B21DCF9DE00219FFB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557807A21DCF9DE00219FFB /* Comment.swift */; };
 		A56BFF6021C4145E009F9D4F /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56BFF5F21C4145E009F9D4F /* UIExtensions.swift */; };
 		A56C40A121C4F83100203A9B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C40A021C4F83100203A9B /* SplashViewController.swift */; };
 		A57A633F21C51BCB00E836B0 /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57A633E21C51BCB00E836B0 /* Material.framework */; };
@@ -77,6 +78,7 @@
 		A537209021CA77BF00613145 /* Heebo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Medium.ttf"; sourceTree = "<group>"; };
 		A537209121CA77BF00613145 /* Heebo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Black.ttf"; sourceTree = "<group>"; };
 		A537209221CA77BF00613145 /* Heebo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Bold.ttf"; sourceTree = "<group>"; };
+		A557807A21DCF9DE00219FFB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		A56BFF5F21C4145E009F9D4F /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		A56C40A021C4F83100203A9B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		A57A633E21C51BCB00E836B0 /* Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Material.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +253,7 @@
 				A595463821C3C10F00DFF43C /* FirebaseModel.swift */,
 				A595463921C3C10F00DFF43C /* Model.swift */,
 				A595463721C3C10F00DFF43C /* Property.swift */,
+				A557807A21DCF9DE00219FFB /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				A595463B21C3C10F00DFF43C /* FirebaseModel.swift in Sources */,
 				A595463321C3C10000DFF43C /* PropertyViewController.swift in Sources */,
 				A595464921C3C51600DFF43C /* UserLoggedInData.swift in Sources */,
+				A557807B21DCF9DE00219FFB /* Comment.swift in Sources */,
 				A595463521C3C10000DFF43C /* AddCommentViewController.swift in Sources */,
 				A595462C21C3C0D900DFF43C /* PropertyTableViewCell.swift in Sources */,
 				A59545E721C3BCB800DFF43C /* AppDelegate.swift in Sources */,

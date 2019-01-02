@@ -11,15 +11,27 @@ import Foundation
 class Property{
     let id: NSNumber
     let address: String
+    let price: String
+    let numberOfRooms: String
+    let imageUrl: String
+    var comments: [Comment]?
     
-    init(_id: NSNumber, _address: String) {
+    init(_id: NSNumber, _address: String, _price: String, _numberOfRooms: String, _imageUrl: String, _comments: [Comment]? = nil) {
         id = _id
         address = _address
+        price = _price
+        numberOfRooms = _numberOfRooms
+        imageUrl = _imageUrl
+        comments = _comments
     }
     
     init(data:[String: Any]){
         id = data["id"] as! NSNumber
         address = data["address"] as! String
+        price = data["price"] as! String
+        numberOfRooms = data["numberOfRooms"] as! String
+        imageUrl = data["imageUrl"] as! String
+        comments = data["comments"] as!  [Comment]?
     }
     
     

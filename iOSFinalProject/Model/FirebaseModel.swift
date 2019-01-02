@@ -10,6 +10,7 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 import FirebaseFirestore
+import FirebaseStorage
 
 class FirebaseModel{
     
@@ -92,5 +93,39 @@ class FirebaseModel{
     
     private func sendLoggedInStatusMessage(isLoggedIn: Bool, error: Error? = nil){
         NotificationService.userLoggedInNotification.notify(data: UserLoggedInData(_isLoggedIn: isLoggedIn, _error: error))
+    }
+    
+    func getImage(url:String, callback:@escaping (UIImage?)->Void){
+        let ref = Storage.storage().reference(forURL: url)
+        ref.getData(maxSize: 10 * 1024 * 1024) { data, error in
+            if error != nil {
+                callback(nil)
+            } else {
+                let image = UIImage(data: data!)
+                callback(image)
+            }
+        }
+    }
+    
+    lazy var storageRef = Storage.storage().reference(forURL: "gs://ios2018-f658d.appspot.com") //TODO change to our url
+    
+    func saveImage(image:UIImage, name:(String), callback:@escaping (String?)->Void){
+        
+        let data = image.jpegData(compressionQuality: 0.8)
+        let imageRef = storageRef.child(name)
+        
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        
+        imageRef.putData(data!, metadata: metadata) { (metadata, error) in
+            imageRef.downloadURL { (url, error) in
+                guard let downloadURL = url else {
+                    // Uh-oh, an error occurred!
+                    return
+                }
+                print("url: \(downloadURL)")
+                callback(downloadURL.absoluteString)
+            }
+        }
     }
 }

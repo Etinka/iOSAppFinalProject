@@ -11,6 +11,9 @@ import UIKit
 class PropertyTableViewCell: UITableViewCell {
 
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var numOfRoomsLabel: UILabel!
+    @IBOutlet weak var propertyImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
