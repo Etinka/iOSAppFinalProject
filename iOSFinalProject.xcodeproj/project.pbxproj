@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		37AB249770D0A5BCE0BED21D /* Pods_iOSFinalProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F24B86CC23F03311A26B17 /* Pods_iOSFinalProjectTests.framework */; };
-		3D8CB7BC21DD05D7001BA762 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D8CB7BB21DD05D7001BA762 /* GoogleService-Info.plist */; };
 		A537209321CA77BF00613145 /* Heebo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537208C21CA77BE00613145 /* Heebo-Regular.ttf */; };
 		A537209421CA77C000613145 /* Heebo-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537208D21CA77BE00613145 /* Heebo-ExtraBold.ttf */; };
 		A537209521CA77C000613145 /* Heebo-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537208E21CA77BE00613145 /* Heebo-Thin.ttf */; };
@@ -16,7 +15,15 @@
 		A537209721CA77C000613145 /* Heebo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537209021CA77BF00613145 /* Heebo-Medium.ttf */; };
 		A537209821CA77C000613145 /* Heebo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537209121CA77BF00613145 /* Heebo-Black.ttf */; };
 		A537209921CA77C000613145 /* Heebo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537209221CA77BF00613145 /* Heebo-Bold.ttf */; };
+		A549274621DD07320067817E /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A549274521DD07320067817E /* UserInfo.swift */; };
+		A549274821DD07490067817E /* LastUpdateAt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A549274721DD07490067817E /* LastUpdateAt.swift */; };
+		A549274B21DD07C40067817E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A549274921DD07C40067817E /* libsqlite3.0.tbd */; };
+		A549274C21DD07C40067817E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A549274A21DD07C40067817E /* libsqlite3.tbd */; };
+		A549274E21DD09A40067817E /* ModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = A549274D21DD09A40067817E /* ModelSql.swift */; };
+		A549275021DD0A1D0067817E /* PropertySql.swift in Sources */ = {isa = PBXBuildFile; fileRef = A549274F21DD0A1D0067817E /* PropertySql.swift */; };
 		A557807B21DCF9DE00219FFB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557807A21DCF9DE00219FFB /* Comment.swift */; };
+		A55F1F9121DD400300634F0D /* CommentSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55F1F9021DD400300634F0D /* CommentSql.swift */; };
+		A55F1F9321DD5CC800634F0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A55F1F9221DD5CC800634F0D /* GoogleService-Info.plist */; };
 		A56BFF6021C4145E009F9D4F /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56BFF5F21C4145E009F9D4F /* UIExtensions.swift */; };
 		A56C40A121C4F83100203A9B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C40A021C4F83100203A9B /* SplashViewController.swift */; };
 		A57A633F21C51BCB00E836B0 /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57A633E21C51BCB00E836B0 /* Material.framework */; };
@@ -63,7 +70,6 @@
 
 /* Begin PBXFileReference section */
 		37CAB5AB6CB8112BFCCF4E6F /* Pods-iOSFinalProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFinalProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFinalProjectUITests/Pods-iOSFinalProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
-		3D8CB7BB21DD05D7001BA762 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4973A371684EFF561252B252 /* Pods_iOSFinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSFinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2A854A1EE8BC02F1A66E56 /* Pods-iOSFinalProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFinalProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFinalProjectTests/Pods-iOSFinalProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D6CD3B03CB718E981DAA19D /* Pods-iOSFinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFinalProject/Pods-iOSFinalProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,7 +84,15 @@
 		A537209021CA77BF00613145 /* Heebo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Medium.ttf"; sourceTree = "<group>"; };
 		A537209121CA77BF00613145 /* Heebo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Black.ttf"; sourceTree = "<group>"; };
 		A537209221CA77BF00613145 /* Heebo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Bold.ttf"; sourceTree = "<group>"; };
+		A549274521DD07320067817E /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		A549274721DD07490067817E /* LastUpdateAt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUpdateAt.swift; sourceTree = "<group>"; };
+		A549274921DD07C40067817E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		A549274A21DD07C40067817E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A549274D21DD09A40067817E /* ModelSql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSql.swift; sourceTree = "<group>"; };
+		A549274F21DD0A1D0067817E /* PropertySql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySql.swift; sourceTree = "<group>"; };
 		A557807A21DCF9DE00219FFB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		A55F1F9021DD400300634F0D /* CommentSql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSql.swift; sourceTree = "<group>"; };
+		A55F1F9221DD5CC800634F0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "iOSFinalProject/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A56BFF5F21C4145E009F9D4F /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		A56C40A021C4F83100203A9B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		A57A633E21C51BCB00E836B0 /* Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Material.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +132,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A549274B21DD07C40067817E /* libsqlite3.0.tbd in Frameworks */,
+				A549274C21DD07C40067817E /* libsqlite3.tbd in Frameworks */,
 				A57A633F21C51BCB00E836B0 /* Material.framework in Frameworks */,
 				B659C42C038E712E758F1388 /* Pods_iOSFinalProject.framework in Frameworks */,
 			);
@@ -182,6 +198,8 @@
 			children = (
 				A56BFF5F21C4145E009F9D4F /* UIExtensions.swift */,
 				A57A634021C5283100E836B0 /* GeneralExtensions.swift */,
+				A549274F21DD0A1D0067817E /* PropertySql.swift */,
+				A55F1F9021DD400300634F0D /* CommentSql.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +207,7 @@
 		A59545DA21C3BCB800DFF43C = {
 			isa = PBXGroup;
 			children = (
+				A55F1F9221DD5CC800634F0D /* GoogleService-Info.plist */,
 				A59545E521C3BCB800DFF43C /* iOSFinalProject */,
 				A59545FD21C3BCB900DFF43C /* iOSFinalProjectTests */,
 				A595460821C3BCB900DFF43C /* iOSFinalProjectUITests */,
@@ -211,7 +230,6 @@
 		A59545E521C3BCB800DFF43C /* iOSFinalProject */ = {
 			isa = PBXGroup;
 			children = (
-				3D8CB7BB21DD05D7001BA762 /* GoogleService-Info.plist */,
 				A537207C21CA774900613145 /* Resources */,
 				A56BFF5E21C4144A009F9D4F /* Extensions */,
 				A595462A21C3C0C400DFF43C /* Cells */,
@@ -254,6 +272,9 @@
 				A595463921C3C10F00DFF43C /* Model.swift */,
 				A595463721C3C10F00DFF43C /* Property.swift */,
 				A557807A21DCF9DE00219FFB /* Comment.swift */,
+				A549274521DD07320067817E /* UserInfo.swift */,
+				A549274721DD07490067817E /* LastUpdateAt.swift */,
+				A549274D21DD09A40067817E /* ModelSql.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,6 +304,8 @@
 		EB853B53EC40859895B98D2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A549274921DD07C40067817E /* libsqlite3.0.tbd */,
+				A549274A21DD07C40067817E /* libsqlite3.tbd */,
 				A57A633E21C51BCB00E836B0 /* Material.framework */,
 				4973A371684EFF561252B252 /* Pods_iOSFinalProject.framework */,
 				B7F24B86CC23F03311A26B17 /* Pods_iOSFinalProjectTests.framework */,
@@ -408,7 +431,7 @@
 				A537209821CA77C000613145 /* Heebo-Black.ttf in Resources */,
 				A537209721CA77C000613145 /* Heebo-Medium.ttf in Resources */,
 				A537209521CA77C000613145 /* Heebo-Thin.ttf in Resources */,
-				3D8CB7BC21DD05D7001BA762 /* GoogleService-Info.plist in Resources */,
+				A55F1F9321DD5CC800634F0D /* GoogleService-Info.plist in Resources */,
 				A537209921CA77C000613145 /* Heebo-Bold.ttf in Resources */,
 				A59545EC21C3BCB800DFF43C /* Main.storyboard in Resources */,
 			);
@@ -550,10 +573,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A549274621DD07320067817E /* UserInfo.swift in Sources */,
 				A595463A21C3C10F00DFF43C /* Property.swift in Sources */,
+				A55F1F9121DD400300634F0D /* CommentSql.swift in Sources */,
 				A59545EF21C3BCB800DFF43C /* iOSFinalProject.xcdatamodeld in Sources */,
 				A57A634121C5283100E836B0 /* GeneralExtensions.swift in Sources */,
 				A595463C21C3C10F00DFF43C /* Model.swift in Sources */,
+				A549275021DD0A1D0067817E /* PropertySql.swift in Sources */,
 				A595463B21C3C10F00DFF43C /* FirebaseModel.swift in Sources */,
 				A595463321C3C10000DFF43C /* PropertyViewController.swift in Sources */,
 				A595464921C3C51600DFF43C /* UserLoggedInData.swift in Sources */,
@@ -562,8 +588,10 @@
 				A595462C21C3C0D900DFF43C /* PropertyTableViewCell.swift in Sources */,
 				A59545E721C3BCB800DFF43C /* AppDelegate.swift in Sources */,
 				A5F47F0321C3C73100A2AC48 /* LoginViewController.swift in Sources */,
+				A549274821DD07490067817E /* LastUpdateAt.swift in Sources */,
 				A56BFF6021C4145E009F9D4F /* UIExtensions.swift in Sources */,
 				A5F47F0421C3C73100A2AC48 /* RegisterViewController.swift in Sources */,
+				A549274E21DD09A40067817E /* ModelSql.swift in Sources */,
 				A595463421C3C10000DFF43C /* PropertiesTableViewController.swift in Sources */,
 				A595464A21C3C51600DFF43C /* NotificationService.swift in Sources */,
 				A595464521C3C4C300DFF43C /* BaseLoginViewController.swift in Sources */,

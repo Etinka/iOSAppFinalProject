@@ -14,6 +14,7 @@ class Model {
     static let instance:Model = Model()
     
     var modelFirebase = FirebaseModel()
+    var modelSql = ModelSql();
     
     func start(){
         modelFirebase.start()
@@ -24,7 +25,7 @@ class Model {
     }
     
     func isLoggedIn() -> Bool{
-       return modelFirebase.isUserLoggedIn()
+        return modelFirebase.isUserLoggedIn()
     }
     
     func registerUser(email: String, password: String){
@@ -39,8 +40,43 @@ class Model {
         modelFirebase.logout()
     }
     
-    func getAllProperties(callback: @escaping ([Property]) -> Void){
-        modelFirebase.getAllProperties(callback: callback)
+    func getUserUid() -> String{
+        return modelFirebase.getUserUid()
+    }
+    
+    func getAllProperties(){
+        self.getLocalPropertiesAndNotify()
+        var lastUpdated = Property.getLastUpdateDate(database: modelSql.database)
+        
+        modelFirebase.getAllProperties(from:lastUpdated, callback: { (data) in
+            for prop in data{
+                Property.addNew(database: self.modelSql.database, property: prop)
+                prop.comments?.forEach({(comment) in
+                    Comment.addNew(database: self.modelSql.database, comment: comment)
+                })
+                if (prop.lastUpdate != nil && prop.lastUpdate?.compare(lastUpdated as Date) == ComparisonResult.orderedDescending){
+                    lastUpdated = prop.lastUpdate!
+                }
+            }
+
+            Property.setLastUpdateDate(database: self.modelSql.database, date: lastUpdated)
+
+            if(data.count > 0){
+                print("Received \(data.count) new items --> Updating")
+                self.getLocalPropertiesAndNotify()
+            }
+        })
+    }
+    
+    func getLocalPropertiesAndNotify(){
+        let propertiesFullData = Property.getAll(database: self.modelSql.database)
+        if(propertiesFullData.count > 0){
+            NotificationService.propertiesListUpdated.notify(data: propertiesFullData)
+        }
+    }
+    
+    func updateProperty(property: Property){
+        modelFirebase.updateProperty(property: property)
     }
     
     func getImage(url:String, callback:@escaping (UIImage?)->Void){

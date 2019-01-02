@@ -15,7 +15,13 @@ class AddCommentViewController: UIViewController {
         title = "Add comment"
     }
     
-
+//            let comment =  Comment(_text: " 1וואו", _imageUrl: nil, _userUid: Model.instance.getUserUid())
+ //              let comment2 =  Comment(_text: "2וואו", _imageUrl: nil, _userUid: Model.instance.getUserUid())
+ //            prop.addComment(comment: comment)
+ //            prop.addComment(comment: comment2)
+ ////
+ //            Model.instance.updateProperty(property: prop)
+    
     /*
     // MARK: - Navigation
 

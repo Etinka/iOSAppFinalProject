@@ -11,16 +11,18 @@ import UIKit
 class PropertiesTableViewController: UITableViewController {
     var data = [Property]()
     var selectedProperty:Property?
+    private var listObserver: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "גג"
         self.setNavigationController()
-
-        Model.instance.getAllProperties(callback: {(data:[Property]) in
-            self.data = data
-            self.tableView.reloadData()
-        })
+        registerToListChanges()
+        Model.instance.getAllProperties()
+    }
+    
+    deinit{
+       unregisterToListChanges()
     }
     
     // MARK: - Table view data source
@@ -77,4 +79,15 @@ class PropertiesTableViewController: UITableViewController {
         
     }
     
+    func registerToListChanges(){
+        listObserver =  NotificationService.propertiesListUpdated.observe() {
+            (data:Any) in
+            self.data = data as! [Property]
+            self.tableView.reloadData()
+        }
+    }
+    
+    func unregisterToListChanges(){
+        NotificationService.userLoggedInNotification.removeObserver(observer: listObserver)
+    }
 }

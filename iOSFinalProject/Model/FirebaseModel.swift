@@ -18,11 +18,14 @@ class FirebaseModel{
     let propertiesCollection:CollectionReference
     var listener: ListenerRegistration?
     var authStateListener: AuthStateDidChangeListenerHandle?
+    let userInfoCollection:CollectionReference
     
     init() {
         FirebaseApp.configure()
         db = Firestore.firestore()
         propertiesCollection = db.collection("properties")
+        userInfoCollection = db.collection("users")
+        
     }
     
     func start(){
@@ -47,9 +50,15 @@ class FirebaseModel{
         return Auth.auth().currentUser != nil
     }
     
+    func getUserUid() -> String{
+        return Auth.auth().currentUser?.uid ?? ""
+    }
+    
     func registerUser(email: String, password: String){
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
-            if (authResult?.user) != nil  {
+            if  let userFB = authResult?.user {
+                let user = UserInfo(_id: userFB.uid, _email: userFB.email ?? "")
+                self.userInfoCollection.addDocument(data: user.toJson(), completion:nil)
                 self.sendLoggedInStatusMessage(isLoggedIn: true)
             }
             else  {
@@ -72,9 +81,9 @@ class FirebaseModel{
             print("logout error")
         }
     }
-    
-    func getAllProperties(callback: @escaping ([Property]) -> Void){
-        listener = propertiesCollection.addSnapshotListener({ (querySnapshot, err) in
+   
+    func getAllProperties(from: NSDate, callback: @escaping ([Property]) -> Void){
+        listener = propertiesCollection.whereField("lastUpdate", isGreaterThan: from).addSnapshotListener({ (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
                 //Todo --> add error handling in the viewcontroller
@@ -89,6 +98,10 @@ class FirebaseModel{
                 callback(data)
             }
         })
+    }
+    
+    func updateProperty(property: Property){
+        propertiesCollection.document("\(property.id)").updateData(property.toJson())
     }
     
     private func sendLoggedInStatusMessage(isLoggedIn: Bool, error: Error? = nil){
