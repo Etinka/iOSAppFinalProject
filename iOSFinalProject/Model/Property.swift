@@ -21,8 +21,7 @@ class Property{
     var comments: [Comment]?
     var lastUpdate: NSDate?
 
-    
-    init(_id: Int, _address: String, _price: String, _numberOfRooms: String, _imageUrl: String, _floor: String, _elevator:Bool, _safeRoom:Bool, _comments: [Comment]? = nil) {
+    init(_id: Int = 0, _address: String = "", _price: String = "", _numberOfRooms: String = "", _imageUrl: String = "", _floor: String = "", _elevator:Bool = false, _safeRoom:Bool = false, _comments: [Comment]? = nil) {
         id = _id
         address = _address
         price = _price
@@ -77,6 +76,10 @@ class Property{
         }
         comment.id = "prop\(id)_\(comment.userUid)\(comments?.count ?? 1)"
         comments?.append(comment)
+    }
+    
+    func getComment(index: Int)-> Comment?{
+        return comments?.safeGet(index: index)
     }
     
     

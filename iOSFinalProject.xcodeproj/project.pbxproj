@@ -21,6 +21,7 @@
 		A549274C21DD07C40067817E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A549274A21DD07C40067817E /* libsqlite3.tbd */; };
 		A549274E21DD09A40067817E /* ModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = A549274D21DD09A40067817E /* ModelSql.swift */; };
 		A549275021DD0A1D0067817E /* PropertySql.swift in Sources */ = {isa = PBXBuildFile; fileRef = A549274F21DD0A1D0067817E /* PropertySql.swift */; };
+		A54F7A9A21DF8D1800D0B63C /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F7A9921DF8D1800D0B63C /* LoadingButton.swift */; };
 		A557807B21DCF9DE00219FFB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557807A21DCF9DE00219FFB /* Comment.swift */; };
 		A55F1F9121DD400300634F0D /* CommentSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55F1F9021DD400300634F0D /* CommentSql.swift */; };
 		A55F1F9321DD5CC800634F0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A55F1F9221DD5CC800634F0D /* GoogleService-Info.plist */; };
@@ -90,6 +91,7 @@
 		A549274A21DD07C40067817E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A549274D21DD09A40067817E /* ModelSql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSql.swift; sourceTree = "<group>"; };
 		A549274F21DD0A1D0067817E /* PropertySql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySql.swift; sourceTree = "<group>"; };
+		A54F7A9921DF8D1800D0B63C /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		A557807A21DCF9DE00219FFB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		A55F1F9021DD400300634F0D /* CommentSql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSql.swift; sourceTree = "<group>"; };
 		A55F1F9221DD5CC800634F0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "iOSFinalProject/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				A57A634021C5283100E836B0 /* GeneralExtensions.swift */,
 				A549274F21DD0A1D0067817E /* PropertySql.swift */,
 				A55F1F9021DD400300634F0D /* CommentSql.swift */,
+				A54F7A9921DF8D1800D0B63C /* LoadingButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54F7A9A21DF8D1800D0B63C /* LoadingButton.swift in Sources */,
 				A549274621DD07320067817E /* UserInfo.swift in Sources */,
 				A595463A21C3C10F00DFF43C /* Property.swift in Sources */,
 				A55F1F9121DD400300634F0D /* CommentSql.swift in Sources */,

@@ -66,4 +66,18 @@ class PropertyViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addComment"{
+            let commentVc:AddCommentViewController = segue.destination as! AddCommentViewController
+            
+            if let prop = property {
+                commentVc.property = prop
+                if prop.comments != nil {//todo
+                    commentVc.commentIndex = 0
+                }
+            }
+        }
+        
+    }
 }

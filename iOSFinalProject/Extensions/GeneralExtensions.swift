@@ -18,3 +18,18 @@ extension String {
         return matches[0].url?.scheme == "mailto"
     }
 }
+
+extension Array {
+    
+    func safeGet(index: Int?) -> Element? {
+        if let newIndex = index{
+            if (newIndex < count && newIndex >= 0){
+                return self[newIndex]
+            }
+            else{
+                return nil
+            }
+        }
+        return nil
+    }
+}

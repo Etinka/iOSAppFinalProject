@@ -16,11 +16,34 @@ class Model {
     var modelFirebase = FirebaseModel()
     var modelSql = ModelSql();
     
-    func start(){
+    init() {
         modelFirebase.start()
+        
+        var lastUpdated = Property.getLastUpdateDate(database: modelSql.database)
+        print("Starting fire base model \(lastUpdated)")
+        
+        modelFirebase.getAllProperties(from:lastUpdated, callback: { (data) in
+            for prop in data{
+                Property.addNew(database: self.modelSql.database, property: prop)
+                prop.comments?.forEach({(comment) in
+                    Comment.addNew(database: self.modelSql.database, comment: comment)
+                })
+                if (prop.lastUpdate != nil && prop.lastUpdate?.compare(lastUpdated as Date) == ComparisonResult.orderedDescending){
+                    lastUpdated = prop.lastUpdate!
+                }
+            }
+            
+            Property.setLastUpdateDate(database: self.modelSql.database, date: lastUpdated)
+            
+            if(data.count > 0){
+                print("Received \(data.count) new items --> Updating")
+                self.getLocalPropertiesAndNotify()
+            }
+        })
+        
     }
-    
-    func stop(){
+   
+    deinit {
         modelFirebase.stop()
     }
     
@@ -45,27 +68,8 @@ class Model {
     }
     
     func getAllProperties(){
+        print("getAllProperties called")
         self.getLocalPropertiesAndNotify()
-        var lastUpdated = Property.getLastUpdateDate(database: modelSql.database)
-        
-        modelFirebase.getAllProperties(from:lastUpdated, callback: { (data) in
-            for prop in data{
-                Property.addNew(database: self.modelSql.database, property: prop)
-                prop.comments?.forEach({(comment) in
-                    Comment.addNew(database: self.modelSql.database, comment: comment)
-                })
-                if (prop.lastUpdate != nil && prop.lastUpdate?.compare(lastUpdated as Date) == ComparisonResult.orderedDescending){
-                    lastUpdated = prop.lastUpdate!
-                }
-            }
-
-            Property.setLastUpdateDate(database: self.modelSql.database, date: lastUpdated)
-
-            if(data.count > 0){
-                print("Received \(data.count) new items --> Updating")
-                self.getLocalPropertiesAndNotify()
-            }
-        })
     }
     
     func getLocalPropertiesAndNotify(){
@@ -75,8 +79,8 @@ class Model {
         }
     }
     
-    func updateProperty(property: Property){
-        modelFirebase.updateProperty(property: property)
+    func updateProperty(property: Property, callback:@escaping (Bool)->Void){
+        modelFirebase.updateProperty(property: property, callback: callback)
     }
     
     func getImage(url:String, callback:@escaping (UIImage?)->Void){
@@ -106,8 +110,9 @@ class Model {
     }
     
     func saveImage(image:UIImage, name:(String),callback:@escaping (String?)->Void){
+        print("Saving image with name: \(name)")
+        saveImageToFile(image: image, name: name)
         modelFirebase.saveImage(image: image, name: name, callback: callback)
-        
     }
     
     func getImageFromFile(name:String)->UIImage?{

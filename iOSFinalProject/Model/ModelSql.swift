@@ -22,7 +22,7 @@ class ModelSql {
                 print("Failed to open db file: \(path.absoluteString)")
                 return
             }
-//            dropTables()
+            dropTables()
             createTables()
         }
         
@@ -39,8 +39,6 @@ class ModelSql {
         LastUpdateAt.drop(database: database)
         Comment.drop(database: database)
     }
-    
-    
 }
 
 

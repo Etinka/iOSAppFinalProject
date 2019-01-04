@@ -15,7 +15,7 @@ class Comment{
     var userUid:String
     var isActive:Bool
     
-    init(_id: String = "", _text: String?, _imageUrl: String?, _userUid: String, _isActive: Bool = true) {
+    init(_id: String = "", _text: String? = nil, _imageUrl: String? = nil, _userUid: String = "", _isActive: Bool = true) {
         self.id = _id
         self.text = _text
         self.imageUrl = _imageUrl

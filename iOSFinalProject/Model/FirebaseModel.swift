@@ -20,12 +20,14 @@ class FirebaseModel{
     var authStateListener: AuthStateDidChangeListenerHandle?
     let userInfoCollection:CollectionReference
     
+    lazy var storageRef = Storage.storage().reference(forURL: "gs://colmanfinalproject-b0801.appspot.com")
+    
     init() {
         FirebaseApp.configure()
         db = Firestore.firestore()
         propertiesCollection = db.collection("properties")
         userInfoCollection = db.collection("users")
-        
+//        logout()
     }
     
     func start(){
@@ -100,8 +102,9 @@ class FirebaseModel{
         })
     }
     
-    func updateProperty(property: Property){
+    func updateProperty(property: Property,callback:@escaping (Bool)->Void){
         propertiesCollection.document("\(property.id)").updateData(property.toJson())
+        callback(true)
     }
     
     private func sendLoggedInStatusMessage(isLoggedIn: Bool, error: Error? = nil){
@@ -119,8 +122,7 @@ class FirebaseModel{
             }
         }
     }
-    
-    lazy var storageRef = Storage.storage().reference(forURL: "gs://ios2018-f658d.appspot.com") //TODO change to our url
+
     
     func saveImage(image:UIImage, name:(String), callback:@escaping (String?)->Void){
         

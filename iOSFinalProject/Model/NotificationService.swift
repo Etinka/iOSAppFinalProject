@@ -30,9 +30,7 @@ class NotificationService{
         }
         
         func notify(data:T){
-            if(count>0){
             NotificationCenter.default.post(name: NSNotification.Name(name), object: self, userInfo: ["data":data])
-            }
         }
         
         func removeObserver(observer: NSObjectProtocol?){
