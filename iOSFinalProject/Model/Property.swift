@@ -20,7 +20,7 @@ class Property{
     let safeRoom: Bool
     var comments: [Comment]?
     var lastUpdate: NSDate?
-
+    
     init(_id: Int = 0, _address: String = "", _price: String = "", _numberOfRooms: String = "", _imageUrl: String = "", _floor: String = "", _elevator:Bool = false, _safeRoom:Bool = false, _comments: [Comment]? = nil) {
         id = _id
         address = _address
@@ -42,7 +42,7 @@ class Property{
         elevator = data["elevator"] as! Bool
         safeRoom = data["safeRoom"] as! Bool
         imageUrl = data["imageUrl"] as! String
-
+        
         let tempComments = data["comments"] as! [[String:Any]]?
         tempComments?.forEach({(temp) in
             addComment(comment: Comment(data:temp))
@@ -65,7 +65,7 @@ class Property{
         json["comments"] = comments?.map({ (comment) -> [String:Any]  in
             comment.dictionary
         })
-
+        
         json["lastUpdate"] = FieldValue.serverTimestamp()
         return json
     }
@@ -77,10 +77,16 @@ class Property{
         comment.id = "prop\(id)_\(comment.userUid)\(comments?.count ?? 1)"
         comments?.append(comment)
     }
-    
+
     func getComment(index: Int)-> Comment?{
         return comments?.safeGet(index: index)
     }
     
-    
+    func updateCommentIfExists(comment:Comment){
+        if  let index = comments?.index(where: { (item) -> Bool in
+            item.id == comment.id
+        }){
+            comments?[index] = comment
+        }
+    }
 }

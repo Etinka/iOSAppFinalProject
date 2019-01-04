@@ -73,9 +73,6 @@ class PropertyViewController: UIViewController {
             
             if let prop = property {
                 commentVc.property = prop
-                if prop.comments != nil {//todo
-                    commentVc.commentIndex = 0
-                }
             }
         }
         

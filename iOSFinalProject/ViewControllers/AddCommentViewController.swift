@@ -34,10 +34,10 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
             if let comment = property.comments?.safeGet(index: index){
                 commentText.textColor = UIColor.appPurple
                 commentText.text = comment.text
-                if let comImage = comment.imageUrl{
+                
+                if let comImage = comment.imageUrl.getValueOrNil(){
                     toggleButton(canAdd: false)
                     
-                    //todo add image
                     Model.instance.getImage(url: comImage) {(image:UIImage?) in
                         if image != nil {
                             self.commentImage.image = image?.resizeImage(144, opaque: false)
@@ -72,22 +72,25 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
     @IBAction func addCommentClicked(_ sender: Any) {
         addButton.showLoading()
         
-        
+        var comment = Comment()
         if let index = commentIndex{
-            self.property.comments?.safeGet(index: index)?.text = self.commentText.text
-            if let imageToSave = selectedImage{
-                Model.instance.saveImage(image: imageToSave, name: "\(self.property.comments?.safeGet(index: index)?.id ?? "id")_\(UUID.init().uuidString)", callback: {(url: String?) in
-                    self.property.comments?.safeGet(index: index)?.imageUrl = url
-                    self.updateProperty()
-                })
-            }else{
-                self.updateProperty()
-            }
-            
+            //Update
+            comment = self.property.comments?.safeGet(index: index) ?? Comment()
+            comment.text = self.commentText.text
         }else{
-//            let newComment =  Comment(_text: commentText.text, _imageUrl: imageLink, _userUid: Model.instance.getUserUid())
-//            property.addComment(comment: newComment)
-//            updateProperty()
+            //New
+            comment = Comment(_text: commentText.text, _imageUrl: nil, _userUid: Model.instance.getUserUid())
+            property.addComment(comment: comment)
+        }
+        
+        if let imageToSave = selectedImage{
+            Model.instance.saveImage(image: imageToSave, name: "\(comment.id)_\(UUID.init().uuidString)", callback: {(url: String?) in
+                comment.imageUrl = url
+                self.property.updateCommentIfExists(comment: comment)
+                self.updateProperty()
+            })
+        }else{
+            self.updateProperty()
         }
     }
     
@@ -98,7 +101,6 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
             }
         })
     }
-    
     
     @IBAction func clickedAddImage(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(
@@ -118,16 +120,6 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
         }
     }
     
-    // UIImagePickerControllerDelegate
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        commentImage.image = selectedImage?.resizeImage(144, opaque: false)
-        self.dismiss(animated: true, completion: nil)
-        toggleButton(canAdd: false)
-    }
-    
-    
-    
     @IBAction func clickedRemoveImage(_ sender: Any) {
         commentImage.image = nil
         self.property.comments?.safeGet(index: commentIndex)?.imageUrl = nil
@@ -137,5 +129,17 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
     func toggleButton(canAdd: Bool){
         removeImageButton.isHidden = canAdd
         addImageButton.isEnabled = canAdd
+    }
+    
+    // UIImagePickerControllerDelegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        commentImage.image = selectedImage?.resizeImage(144, opaque: false)
+        self.dismiss(animated: true, completion: nil)
+        toggleButton(canAdd: false)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

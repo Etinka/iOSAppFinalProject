@@ -85,7 +85,7 @@ class Model {
     
     func getImage(url:String, callback:@escaping (UIImage?)->Void){
         let _url = URL(string: url)
-        let localImageName = _url!.lastPathComponent
+        let localImageName = _url?.lastPathComponent ?? ""
         if let image = self.getImageFromFile(name: localImageName){
             callback(image)
             print("got image from cache \(localImageName)")

@@ -19,6 +19,26 @@ extension String {
     }
 }
 
+extension Optional where Wrapped == String {
+    func isNilOrEmpty() -> Bool{
+        return self?.isEmpty ?? true
+    }
+    
+    func getValueOrNil() -> String?{
+        if self?.isEmpty ?? true{
+            return nil
+        }
+        return self
+    }
+    
+    func getValueOrEmpty() -> String{
+        if let temp = self{
+            return temp
+        }
+        return ""
+    }
+}
+
 extension Array {
     
     func safeGet(index: Int?) -> Element? {
