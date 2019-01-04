@@ -29,7 +29,11 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
         commentText.text = placeHolder
         commentText.textColor = UIColor.lightGray
         removeImageButton.isHidden = true
-        
+        commentImage.layer.borderWidth = 1
+        commentImage.layer.cornerRadius = 8
+        commentImage.layer.masksToBounds = true
+        commentImage.layer.borderColor = UIColor.appPink.cgColor
+
         if let index = commentIndex{
             if let comment = property.comments?.safeGet(index: index){
                 commentText.textColor = UIColor.appPurple
@@ -121,7 +125,7 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
     }
     
     @IBAction func clickedRemoveImage(_ sender: Any) {
-        commentImage.image = nil
+        commentImage.image = UIImage(named: "AddImagePurple")
         self.property.comments?.safeGet(index: commentIndex)?.imageUrl = nil
         toggleButton(canAdd: true)
     }

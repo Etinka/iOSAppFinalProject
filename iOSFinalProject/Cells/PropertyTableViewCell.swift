@@ -13,7 +13,6 @@ class PropertyTableViewCell: UITableViewCell {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var numOfRoomsLabel: UILabel!
-    @IBOutlet weak var propertyImage: UIImageView!
     @IBOutlet weak var detailsStackView: UIStackView!
     @IBOutlet weak var cellContentView: UIView!
     @IBOutlet weak var detailsView: UIView!
@@ -25,8 +24,7 @@ class PropertyTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
+    // Configure the view for the selected state
     }
 
 }
