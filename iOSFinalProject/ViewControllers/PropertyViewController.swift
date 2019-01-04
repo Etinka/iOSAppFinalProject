@@ -29,6 +29,19 @@ class PropertyViewController: UIViewController {
             priceLabel.text = "\(prop.price) ש״ח"
             numberOfRoomsLabel.text = "מספר חדרים: \(prop.numberOfRooms)"
             floorLabel.text = "קומה: \(prop.floor)"
+            
+            priceLabel.textColor = UIColor.appPurple
+            numberOfRoomsLabel.textColor = UIColor.appPurple
+            floorLabel.textColor = UIColor.appPurple
+            elevatorLabel.textColor = UIColor.appPurple
+            safeRoomLabel.textColor = UIColor.appPurple
+            
+            priceLabel!.setTextSize(size: 24)
+            numberOfRoomsLabel!.setTextSize(size: 14)
+            floorLabel!.setTextSize(size: 14)
+            elevatorLabel!.setTextSize(size: 14)
+            safeRoomLabel!.setTextSize(size: 14)
+            
             let hasElevator = prop.elevator;
             if hasElevator {
                 elevatorLabel.text = "מעלית: V"
