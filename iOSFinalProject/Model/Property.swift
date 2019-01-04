@@ -18,10 +18,13 @@ class Property{
     let floor: String
     let elevator: Bool
     let safeRoom: Bool
+    let size: String
+    let houseType: String
+    let balcony: String
     var comments: [Comment]?
     var lastUpdate: NSDate?
     
-    init(_id: Int = 0, _address: String = "", _price: String = "", _numberOfRooms: String = "", _imageUrl: String = "", _floor: String = "", _elevator:Bool = false, _safeRoom:Bool = false, _comments: [Comment]? = nil) {
+    init(_id: Int = 0, _address: String = "", _price: String = "", _numberOfRooms: String = "", _imageUrl: String = "", _floor: String = "", _elevator:Bool = false, _safeRoom:Bool = false,_size:String = "", _houseType:String = "", _balcony:String = "", _comments: [Comment]? = nil) {
         id = _id
         address = _address
         price = _price
@@ -30,6 +33,9 @@ class Property{
         floor = _floor
         elevator = _elevator
         safeRoom = _safeRoom
+        size = _size
+        balcony = _balcony
+        houseType = _houseType
         comments = _comments
     }
     
@@ -42,6 +48,9 @@ class Property{
         elevator = data["elevator"] as! Bool
         safeRoom = data["safeRoom"] as! Bool
         imageUrl = data["imageUrl"] as! String
+        size = data["size"] as! String
+        houseType = data["houseType"] as! String
+        balcony = data["balcony"] as! String
         
         let tempComments = data["comments"] as! [[String:Any]]?
         tempComments?.forEach({(temp) in
@@ -62,6 +71,11 @@ class Property{
         json["price"] = price
         json["numberOfRooms"] = numberOfRooms
         json["imageUrl"] = imageUrl
+        json["balcony"] = balcony
+        json["size"] = size
+        json["houseType"] = houseType
+        json["elevator"] = elevator
+        json["safeRoom"] = safeRoom
         json["comments"] = comments?.map({ (comment) -> [String:Any]  in
             comment.dictionary
         })

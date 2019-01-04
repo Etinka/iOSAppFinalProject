@@ -16,6 +16,9 @@ class PropertyViewController: UIViewController {
     @IBOutlet weak var safeRoomLabel: UILabel!
     @IBOutlet weak var floorLabel: UILabel!
     @IBOutlet weak var elevatorLabel: UILabel!
+    @IBOutlet weak var propertyTypeLabel: UILabel!
+    @IBOutlet weak var balconyLabel: UILabel!
+    @IBOutlet weak var propertySizeLabel: UILabel!
     
     var propertyId:Int?
     var property:Property?
@@ -27,20 +30,29 @@ class PropertyViewController: UIViewController {
         if let prop = property {
             title = prop.address
             priceLabel.text = "\(prop.price) ש״ח"
-            numberOfRoomsLabel.text = "מספר חדרים: \(prop.numberOfRooms)"
-            floorLabel.text = "קומה: \(prop.floor)"
+            numberOfRoomsLabel.text = "\(prop.numberOfRooms) חדרים"
+            floorLabel.text = "קומה \(prop.floor)"
+            propertyTypeLabel.text = prop.houseType
+            balconyLabel.text = "מרפסות ֿֿֿ\(prop.balcony)"
+            propertySizeLabel.text = "\(prop.size) מ״ר"
             
             priceLabel.textColor = UIColor.appPurple
             numberOfRoomsLabel.textColor = UIColor.appPurple
             floorLabel.textColor = UIColor.appPurple
             elevatorLabel.textColor = UIColor.appPurple
             safeRoomLabel.textColor = UIColor.appPurple
+            propertyTypeLabel.textColor = UIColor.appPurple
+            propertySizeLabel.textColor = UIColor.appPurple
+            balconyLabel.textColor = UIColor.appPurple
             
             priceLabel!.setTextSize(size: 24)
             numberOfRoomsLabel!.setTextSize(size: 14)
             floorLabel!.setTextSize(size: 14)
             elevatorLabel!.setTextSize(size: 14)
             safeRoomLabel!.setTextSize(size: 14)
+            balconyLabel!.setTextSize(size: 14)
+            propertyTypeLabel!.setTextSize(size: 14)
+            propertySizeLabel!.setTextSize(size: 14)
             
             let hasElevator = prop.elevator;
             if hasElevator {
