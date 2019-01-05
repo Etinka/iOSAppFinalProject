@@ -42,7 +42,6 @@ class PropertiesTableViewController: UITableViewController {
         cell.addressLabel.text = st.address
         cell.priceLabel.text = " ₪ \(st.price)"
         cell.numOfRoomsLabel.text = "מספר חדרים: \(st.numberOfRooms)"
-        
         cell.addressLabel.textColor = UIColor.appPurple
         cell.numOfRoomsLabel.textColor = UIColor.appPurple
         cell.priceLabel.textColor = UIColor.white
@@ -57,13 +56,13 @@ class PropertiesTableViewController: UITableViewController {
                         imageView.image = image
                         cell.backgroundView = UIView()
                         cell.backgroundView?.layer.cornerRadius = 15
-                        cell.backgroundView!.addSubview(imageView)
+                        cell.addSubview(imageView)
+                        cell.sendSubviewToBack(imageView)
                     }
                 }
             }
             
         }
-        
         return cell
     }
     
