@@ -45,6 +45,7 @@ class PropertiesTableViewController: UITableViewController {
         cell.addressLabel.textColor = UIColor.appPurple
         cell.numOfRoomsLabel.textColor = UIColor.appPurple
         cell.priceLabel.textColor = UIColor.white
+        
         cell.contentView.tag = indexPath.row
         if st.imageUrl != "" {
             Model.instance.getImage(url: st.imageUrl) { (image:UIImage?) in

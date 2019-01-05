@@ -13,7 +13,7 @@ class RegisterViewController: BaseLoginViewController {
 
     let initialPosition:CGFloat = 220
 
-    @IBOutlet weak var btnRegister: UIButton!
+    @IBOutlet weak var registerBtn: LoadingButton!
     
     fileprivate var rePasswordField: TextField!
     fileprivate var passwordField: TextField!
@@ -22,8 +22,8 @@ class RegisterViewController: BaseLoginViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        btnRegister.isEnabled = false
-        btnRegister.setStyle()
+        registerBtn.isEnabled = false
+        registerBtn.setStyle()
         
         prepareEmailField()
         preparePasswordField()
@@ -37,6 +37,7 @@ class RegisterViewController: BaseLoginViewController {
     }
     
     override func notLoggedIn(error: String?) {
+        registerBtn.hideLoading()
         showErrorAlert(title: "Sorry, registration wasn't succesfull")
     }
     
@@ -80,15 +81,16 @@ class RegisterViewController: BaseLoginViewController {
             password == confirmPassword
             else
         {
-            btnRegister.isEnabled = false
+            registerBtn.isEnabled = false
             return
         }
         // enable okButton if all conditions are met
-        btnRegister.isEnabled = true
+        registerBtn.isEnabled = true
     }
 
     @IBAction func clickedRegister(_ sender: Any) {
         NSLog("clickedRegister")
+        registerBtn.showLoading()
         if let userName = emailField.text, let password = passwordField.text{
             Model.instance.registerUser(email: userName, password: password)
         }

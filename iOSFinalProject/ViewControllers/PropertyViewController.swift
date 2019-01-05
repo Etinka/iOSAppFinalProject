@@ -28,31 +28,16 @@ class PropertyViewController: UIViewController {
         self.setNavigationController()
         
         if let prop = property {
+            setLabelsStyle()
+
             title = prop.address
-            priceLabel.text = "\(prop.price) ש״ח"
+            priceLabel.text = " ₪ \(prop.price)"
             numberOfRoomsLabel.text = "\(prop.numberOfRooms) חדרים"
             floorLabel.text = "קומה \(prop.floor)"
             propertyTypeLabel.text = prop.houseType
             balconyLabel.text = "\(prop.balcony) מרפסות"
             propertySizeLabel.text = "\(prop.size) מ״ר"
             
-            priceLabel.textColor = UIColor.appPurple
-            numberOfRoomsLabel.textColor = UIColor.appPurple
-            floorLabel.textColor = UIColor.appPurple
-            elevatorLabel.textColor = UIColor.appPurple
-            safeRoomLabel.textColor = UIColor.appPurple
-            propertyTypeLabel.textColor = UIColor.appPurple
-            propertySizeLabel.textColor = UIColor.appPurple
-            balconyLabel.textColor = UIColor.appPurple
-            
-            priceLabel!.setTextSize(size: 24)
-            numberOfRoomsLabel!.setTextSize(size: 14)
-            floorLabel!.setTextSize(size: 14)
-            elevatorLabel!.setTextSize(size: 14)
-            safeRoomLabel!.setTextSize(size: 14)
-            balconyLabel!.setTextSize(size: 14)
-            propertyTypeLabel!.setTextSize(size: 14)
-            propertySizeLabel!.setTextSize(size: 14)
             
             let hasElevator = prop.elevator;
             if hasElevator {
@@ -77,6 +62,17 @@ class PropertyViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func setLabelsStyle(){
+        priceLabel.setStyle(fontName: .Bold, size: 24)
+        numberOfRoomsLabel.setStyle(size: 14)
+        floorLabel.setStyle(size: 14)
+        elevatorLabel.setStyle(size: 14)
+        safeRoomLabel.setStyle(size: 14)
+        balconyLabel.setStyle(size: 14)
+        propertyTypeLabel.setStyle(size: 14)
+        propertySizeLabel.setStyle(size: 14)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

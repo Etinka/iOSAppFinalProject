@@ -50,7 +50,7 @@ extension UIViewController{
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.appPurple, NSAttributedString.Key.font: UIFont(name: AppFontName.Medium.rawValue, size: 30)!]
         navigationController?.setStyle()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-
+        
     }
 }
 
@@ -61,7 +61,7 @@ extension UINavigationController {
         self.navigationBar.barTintColor = UIColor.white
         self.navigationItem.titleLabel.font = UIFont(name:AppFontName.Medium.rawValue, size:18)
         self.navigationItem.titleLabel.textColor = UIColor.appPurple
-     
+        
         if #available(iOS 11, *){
             self.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.appPurple, NSAttributedString.Key.font: UIFont(name: AppFontName.Medium.rawValue, size: 30)!]
         }
@@ -121,6 +121,11 @@ extension UIColor {
 extension UILabel {
     func setTextSize(size: CGFloat) {
         font = UIFont(name:AppFontName.Medium.rawValue, size:size)
+    }
+    
+    func setStyle(fontName: AppFontName = .Regular, size: CGFloat = 16, color: UIColor = UIColor.appPurple) {
+        font = UIFont(name:fontName.rawValue, size:size)
+        textColor = color
     }
 }
 

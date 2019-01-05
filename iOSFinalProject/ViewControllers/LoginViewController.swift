@@ -13,7 +13,7 @@ class LoginViewController: BaseLoginViewController {
 
     let initialPosition:CGFloat = 260
 
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginButton: LoadingButton!
     fileprivate var passwordField: TextField!
     fileprivate var emailField: ErrorTextField!
 
@@ -68,11 +68,13 @@ class LoginViewController: BaseLoginViewController {
     }
     
     override func notLoggedIn(error: String?) {
+        loginButton.hideLoading()
         showErrorAlert(title: "Sorry, login wasn't succesfull.")
     }
 
     @IBAction func clickedLogin(_ sender: Any) {
         NSLog("clickedLogin")
+        loginButton.showLoading()
         if let userName = emailField.text, let password = passwordField.text{
             Model.instance.signInUser(email: userName, password: password)
         }

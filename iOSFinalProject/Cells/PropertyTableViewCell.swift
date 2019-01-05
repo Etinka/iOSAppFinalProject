@@ -20,8 +20,15 @@ class PropertyTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setLabelsStyle()
     }
-
+    
+    func setLabelsStyle(){
+        priceLabel.setStyle(fontName: .Bold, size: 20, color: UIColor.white)
+        addressLabel.setStyle(size: 12)
+        numOfRoomsLabel.setStyle(size: 12)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     // Configure the view for the selected state
