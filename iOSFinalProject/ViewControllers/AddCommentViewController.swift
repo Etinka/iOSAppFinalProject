@@ -25,6 +25,8 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
         super.viewDidLoad()
         title = property.address
         addButton.setStyle()
+        addDeleteButton()
+        
         commentText.delegate = self
         commentText.text = placeHolder
         commentText.textColor = UIColor.lightGray
@@ -33,7 +35,7 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
         commentImage.layer.cornerRadius = 8
         commentImage.layer.masksToBounds = true
         commentImage.layer.borderColor = UIColor.appPink.cgColor
-
+        
         if let index = commentIndex{
             if let comment = property.comments?.safeGet(index: index){
                 commentText.textColor = UIColor.appPurple
@@ -58,6 +60,13 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
         }
     }
     
+    func addDeleteButton(){
+        if commentIndex != nil{
+            let delete = UIBarButtonItem(title: "מחק", style: .plain, target: self, action:  #selector(clickedDelete))
+            delete.tintColor = UIColor.appPurple
+            navigationItem.rightBarButtonItem = delete
+        }
+    }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
@@ -83,7 +92,7 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
             comment.text = self.commentText.text
         }else{
             //New
-            comment = Comment(_text: commentText.text, _imageUrl: nil, _userUid: Model.instance.getUserUid())
+            comment = Comment(_text: commentText.text, _imageUrl: nil, _userUid: Model.instance.getUserUid(), _userName: Model.instance.getCurrentUserName())
             property.addComment(comment: comment)
         }
         
@@ -145,5 +154,18 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func clickedDelete(){
+        let alert = UIAlertController(title: "האם אתה בטוח?", message:nil, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "לא", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "כן", style: UIAlertAction.Style.destructive, handler:{(action:UIAlertAction) in
+            if let index = self.commentIndex{
+                let comment = self.property.comments?.safeGet(index: index) ?? Comment()
+                comment.isActive = false
+                self.updateProperty()
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }

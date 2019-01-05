@@ -37,33 +37,8 @@ class PropertiesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:PropertyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PropertyCell", for: indexPath) as! PropertyTableViewCell
-        
         let st = data[indexPath.row]
-        cell.addressLabel.text = st.address
-        cell.priceLabel.text = " ₪ \(st.price)"
-        cell.numOfRoomsLabel.text = "מספר חדרים: \(st.numberOfRooms)"
-        cell.addressLabel.textColor = UIColor.appPurple
-        cell.numOfRoomsLabel.textColor = UIColor.appPurple
-        cell.priceLabel.textColor = UIColor.white
-        
-        cell.contentView.tag = indexPath.row
-        if st.imageUrl != "" {
-            Model.instance.getImage(url: st.imageUrl) { (image:UIImage?) in
-                if (cell.contentView.tag == indexPath.row){
-                    if image != nil {
-                        let imageView = UIImageView(frame: CGRect(x: 10, y: 0, width: cell.frame.width - 20, height: cell.frame.height - 10))
-                        imageView.layer.cornerRadius = 15
-                        imageView.layer.masksToBounds = true
-                        imageView.image = image
-                        cell.backgroundView = UIView()
-                        cell.backgroundView?.layer.cornerRadius = 15
-                        cell.addSubview(imageView)
-                        cell.sendSubviewToBack(imageView)
-                    }
-                }
-            }
-            
-        }
+        cell.setViews(st: st, row: indexPath.row)
         return cell
     }
     

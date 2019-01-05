@@ -25,8 +25,31 @@ class PropertyTableViewCell: UITableViewCell {
     
     func setLabelsStyle(){
         priceLabel.setStyle(fontName: .Bold, size: 20, color: UIColor.white)
-        addressLabel.setStyle(size: 12)
-        numOfRoomsLabel.setStyle(size: 12)
+        addressLabel.setStyle(size: 14)
+        numOfRoomsLabel.setStyle(size: 14)
+    }
+    
+    func setViews(st: Property, row: Int){
+        addressLabel.text = st.address
+        priceLabel.text = " ₪ \(st.price)"
+        numOfRoomsLabel.text = "מספר חדרים: \(st.numberOfRooms)"
+        
+        contentView.tag = row
+        if st.imageUrl != "" {
+            Model.instance.getImage(url: st.imageUrl) { (image:UIImage?) in
+                if (self.contentView.tag == row){
+                    if image != nil {
+                        let imageView = UIImageView(frame: CGRect(x: 10, y: 0, width: self.frame.width - 20, height: self.frame.height - 10))
+                        imageView.layer.cornerRadius = 15
+                        imageView.layer.masksToBounds = true
+                        imageView.image = image
+                        self.addSubview(imageView)
+                        self.sendSubviewToBack(imageView)
+                    }
+                }
+            }
+            
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

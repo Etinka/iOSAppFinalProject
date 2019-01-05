@@ -15,6 +15,8 @@
 		A537209721CA77C000613145 /* Heebo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537209021CA77BF00613145 /* Heebo-Medium.ttf */; };
 		A537209821CA77C000613145 /* Heebo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537209121CA77BF00613145 /* Heebo-Black.ttf */; };
 		A537209921CA77C000613145 /* Heebo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537209221CA77BF00613145 /* Heebo-Bold.ttf */; };
+		A53A41FB21E0A57300CE525C /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A41F921E0A57300CE525C /* CommentTableViewCell.swift */; };
+		A53A41FC21E0A57300CE525C /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53A41FA21E0A57300CE525C /* CommentTableViewCell.xib */; };
 		A549274621DD07320067817E /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A549274521DD07320067817E /* UserInfo.swift */; };
 		A549274821DD07490067817E /* LastUpdateAt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A549274721DD07490067817E /* LastUpdateAt.swift */; };
 		A549274B21DD07C40067817E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A549274921DD07C40067817E /* libsqlite3.0.tbd */; };
@@ -85,6 +87,8 @@
 		A537209021CA77BF00613145 /* Heebo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Medium.ttf"; sourceTree = "<group>"; };
 		A537209121CA77BF00613145 /* Heebo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Black.ttf"; sourceTree = "<group>"; };
 		A537209221CA77BF00613145 /* Heebo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Bold.ttf"; sourceTree = "<group>"; };
+		A53A41F921E0A57300CE525C /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		A53A41FA21E0A57300CE525C /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		A549274521DD07320067817E /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		A549274721DD07490067817E /* LastUpdateAt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUpdateAt.swift; sourceTree = "<group>"; };
 		A549274921DD07C40067817E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -300,6 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				A595462B21C3C0D900DFF43C /* PropertyTableViewCell.swift */,
+				A53A41F921E0A57300CE525C /* CommentTableViewCell.swift */,
+				A53A41FA21E0A57300CE525C /* CommentTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 				A537209421CA77C000613145 /* Heebo-ExtraBold.ttf in Resources */,
 				A537209821CA77C000613145 /* Heebo-Black.ttf in Resources */,
 				A537209721CA77C000613145 /* Heebo-Medium.ttf in Resources */,
+				A53A41FC21E0A57300CE525C /* CommentTableViewCell.xib in Resources */,
 				A537209521CA77C000613145 /* Heebo-Thin.ttf in Resources */,
 				A55F1F9321DD5CC800634F0D /* GoogleService-Info.plist in Resources */,
 				A537209921CA77C000613145 /* Heebo-Bold.ttf in Resources */,
@@ -578,6 +585,7 @@
 			files = (
 				A54F7A9A21DF8D1800D0B63C /* LoadingButton.swift in Sources */,
 				A549274621DD07320067817E /* UserInfo.swift in Sources */,
+				A53A41FB21E0A57300CE525C /* CommentTableViewCell.swift in Sources */,
 				A595463A21C3C10F00DFF43C /* Property.swift in Sources */,
 				A55F1F9121DD400300634F0D /* CommentSql.swift in Sources */,
 				A59545EF21C3BCB800DFF43C /* iOSFinalProject.xcdatamodeld in Sources */,

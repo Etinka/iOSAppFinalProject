@@ -54,7 +54,9 @@ class Property{
         
         let tempComments = data["comments"] as! [[String:Any]]?
         tempComments?.forEach({(temp) in
-            addComment(comment: Comment(data:temp))
+//            if data["isActive"] != nil && (data["isActive"] as? Int == 1){
+                addComment(comment: Comment(data:temp))
+//            }
         })
         
         if data["lastUpdate"] != nil {
@@ -94,6 +96,10 @@ class Property{
 
     func getComment(index: Int)-> Comment?{
         return comments?.safeGet(index: index)
+    }
+    
+    func getOnlyActiveComments(){
+        
     }
     
     func updateCommentIfExists(comment:Comment){

@@ -15,9 +15,16 @@ class Model {
     
     var modelFirebase = FirebaseModel()
     var modelSql = ModelSql();
+    private var currentUserInfo:UserInfo?
     
     init() {
         modelFirebase.start()
+        
+        if modelFirebase.isUserLoggedIn(){
+            modelFirebase.getUserInfoForId(id: modelFirebase.getUserUid(), callback: {(info: UserInfo) in
+                self.currentUserInfo = info
+            })
+        }
         
         var lastUpdated = Property.getLastUpdateDate(database: modelSql.database)
         print("Starting fire base model \(lastUpdated)")
@@ -53,11 +60,15 @@ class Model {
     }
     
     func registerUser(email: String, password: String){
-        modelFirebase.registerUser(email: email, password: password)
+        modelFirebase.registerUser(email: email, password: password, callback: {(info: UserInfo) in
+            self.currentUserInfo = info
+        })
     }
     
     func signInUser(email: String, password: String){
-        modelFirebase.signInUser(email: email, password: password)
+        modelFirebase.signInUser(email: email, password: password, callback: {(info: UserInfo) in
+            self.currentUserInfo = info
+        })
     }
     
     func logout(){
@@ -126,5 +137,9 @@ class Model {
             .userDomainMask)
         let documentsDirectory = paths[0]
         return documentsDirectory
+    }
+    
+    func getCurrentUserName() -> String{
+        return currentUserInfo?.name.getValueOrEmpty() ?? ""
     }
 }

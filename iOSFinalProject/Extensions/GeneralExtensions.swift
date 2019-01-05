@@ -53,3 +53,13 @@ extension Array {
         return nil
     }
 }
+
+extension Date{
+    
+    func getDateString() -> String{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MMM-yyyy"
+        let myStringafd = formatter.string(from: self)
+        return myStringafd
+    }
+}

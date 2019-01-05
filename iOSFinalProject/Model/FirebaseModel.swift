@@ -56,12 +56,13 @@ class FirebaseModel{
         return Auth.auth().currentUser?.uid ?? ""
     }
     
-    func registerUser(email: String, password: String){
+    func registerUser(email: String, password: String, callback: @escaping (UserInfo) -> Void){
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if  let userFB = authResult?.user {
                 let user = UserInfo(_id: userFB.uid, _email: userFB.email ?? "")
                 self.userInfoCollection.addDocument(data: user.toJson(), completion:nil)
                 self.sendLoggedInStatusMessage(isLoggedIn: true)
+                callback(user)
             }
             else  {
                 self.sendLoggedInStatusMessage(isLoggedIn: false, error: error)
@@ -69,9 +70,12 @@ class FirebaseModel{
         }
     }
     
-    func signInUser(email: String, password: String){
+    func signInUser(email: String, password: String, callback: @escaping (UserInfo) -> Void){
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             self.sendLoggedInStatusMessage(isLoggedIn: error == nil, error: error)
+            if let current = user{
+                self.getUserInfoForId(id: current.user.uid, callback: callback)
+            }
         }
     }
     
@@ -102,6 +106,19 @@ class FirebaseModel{
         })
     }
     
+    func getUserInfoForId(id: String, callback: @escaping (UserInfo) -> Void){
+         self.userInfoCollection.whereField("id", isEqualTo: id).addSnapshotListener({ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                //Todo --> add error handling in the viewcontroller
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    callback(UserInfo(data: document.data()))
+                }
+            }
+         })
+    }
     func updateProperty(property: Property,callback:@escaping (Bool)->Void){
         propertiesCollection.document("\(property.id)").updateData(property.toJson())
         callback(true)
