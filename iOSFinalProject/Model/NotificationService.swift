@@ -13,6 +13,8 @@ class NotificationService{
 
     static  let propertiesListUpdated = BaseNotification<[Property]>(_name:"com.colman.finalproject.PropertiesUpdated")
     
+    static  let propertyUpdated = BaseNotification<Property>(_name:"com.colman.finalproject.PropertyUpdated")
+
     class BaseNotification<T>{
         let name :String
         var count = 0;
@@ -30,7 +32,9 @@ class NotificationService{
         }
         
         func notify(data:T){
-            NotificationCenter.default.post(name: NSNotification.Name(name), object: self, userInfo: ["data":data])
+            if(count > 0){
+                NotificationCenter.default.post(name: NSNotification.Name(name), object: self, userInfo: ["data":data])
+            }
         }
         
         func removeObserver(observer: NSObjectProtocol?){

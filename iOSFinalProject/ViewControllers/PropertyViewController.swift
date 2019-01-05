@@ -22,21 +22,17 @@ class PropertyViewController: UIViewController {
     
     var propertyId:Int?
     var property:Property?
+    private var propObserver: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationController()
+        registerToPropertyChanges()
         
         if let prop = property {
             setLabelsStyle()
-
             title = prop.address
-            priceLabel.text = " ₪ \(prop.price)"
-            numberOfRoomsLabel.text = "\(prop.numberOfRooms) חדרים"
-            floorLabel.text = "קומה \(prop.floor)"
-            propertyTypeLabel.text = prop.houseType
-            balconyLabel.text = "\(prop.balcony) מרפסות"
-            propertySizeLabel.text = "\(prop.size) מ״ר"
+            self.setLabelsTexts(prop: prop)
             
             
             let hasElevator = prop.elevator;
@@ -64,6 +60,10 @@ class PropertyViewController: UIViewController {
         }
     }
     
+    deinit {
+        unregisterToPropertyChanges()
+    }
+    
     func setLabelsStyle(){
         priceLabel.setStyle(fontName: .Bold, size: 24)
         numberOfRoomsLabel.setStyle(size: 14)
@@ -84,5 +84,32 @@ class PropertyViewController: UIViewController {
             }
         }
         
+    }
+    
+    func registerToPropertyChanges(){
+        propObserver =  NotificationService.propertyUpdated.observe() {
+            (data:Any) in
+            if data is Property{
+                let temp = data as! Property
+                if temp.id == self.property?.id{
+                    self.property = temp
+                    self.setLabelsTexts(prop: temp)
+                }
+            }
+        }
+    }
+    
+    func unregisterToPropertyChanges(){
+        NotificationService.propertyUpdated.removeObserver(observer: propObserver)
+    }
+    
+    func setLabelsTexts(prop: Property){
+        print("Updated property")
+        priceLabel.text = "\(prop.price) ש״ח"
+        numberOfRoomsLabel.text = "\(prop.numberOfRooms) חדרים"
+        floorLabel.text = "קומה \(prop.floor)"
+        propertyTypeLabel.text = prop.houseType
+        balconyLabel.text = "מרפסות \(prop.balcony)"
+        propertySizeLabel.text = "\(prop.size) מ״ר"
     }
 }

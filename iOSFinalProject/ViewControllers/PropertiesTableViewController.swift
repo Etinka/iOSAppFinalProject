@@ -94,6 +94,6 @@ class PropertiesTableViewController: UITableViewController {
     }
     
     func unregisterToListChanges(){
-        NotificationService.userLoggedInNotification.removeObserver(observer: listObserver)
+        NotificationService.propertiesListUpdated.removeObserver(observer: listObserver)
     }
 }

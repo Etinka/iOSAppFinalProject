@@ -31,6 +31,7 @@ class Model {
                 if (prop.lastUpdate != nil && prop.lastUpdate?.compare(lastUpdated as Date) == ComparisonResult.orderedDescending){
                     lastUpdated = prop.lastUpdate!
                 }
+                NotificationService.propertyUpdated.notify(data: prop)
             }
             
             Property.setLastUpdateDate(database: self.modelSql.database, date: lastUpdated)

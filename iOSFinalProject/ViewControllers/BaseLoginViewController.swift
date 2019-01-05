@@ -25,10 +25,11 @@ class BaseLoginViewController: UIViewController {
         registerToAuthChanges()
         
     }
-    override func viewDidDisappear(_ animated: Bool) {
+    
+    deinit {
         unregisterToAuthChanges()
     }
-    
+ 
     func registerToAuthChanges(){
         notificationObserver =  NotificationService.userLoggedInNotification.observe(cb: {(userLoggedInData) in
             if(userLoggedInData.isLoggedIn){
