@@ -37,7 +37,7 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
         commentImage.layer.borderColor = UIColor.appPink.cgColor
         
         if let index = commentIndex{
-            if let comment = property.comments?.safeGet(index: index){
+            if let comment = property.getOnlyActiveComments().safeGet(index: index){
                 commentText.textColor = UIColor.appPurple
                 commentText.text = comment.text
                 
@@ -88,11 +88,11 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
         var comment = Comment()
         if let index = commentIndex{
             //Update
-            comment = self.property.comments?.safeGet(index: index) ?? Comment()
+            comment = self.property.getOnlyActiveComments().safeGet(index: index) ?? Comment()
             comment.text = self.commentText.text
         }else{
             //New
-            comment = Comment(_text: commentText.text, _imageUrl: nil, _userUid: Model.instance.getUserUid(), _userName: Model.instance.getCurrentUserName())
+            comment = Comment(_text: commentText.text, _imageUrl: nil, _userUid: Model.instance.getUserUid(), _isActive: true, _userName: Model.instance.getCurrentUserName())
             property.addComment(comment: comment)
         }
         
@@ -135,7 +135,7 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
     
     @IBAction func clickedRemoveImage(_ sender: Any) {
         commentImage.image = UIImage(named: "AddImagePurple")
-        self.property.comments?.safeGet(index: commentIndex)?.imageUrl = nil
+        self.property.getOnlyActiveComments().safeGet(index: commentIndex)?.imageUrl = nil
         toggleButton(canAdd: true)
     }
     
@@ -161,7 +161,7 @@ class AddCommentViewController: UIViewController, UITextViewDelegate, UIImagePic
         alert.addAction(UIAlertAction(title: "לא", style: UIAlertAction.Style.default, handler: nil))
         alert.addAction(UIAlertAction(title: "כן", style: UIAlertAction.Style.destructive, handler:{(action:UIAlertAction) in
             if let index = self.commentIndex{
-                let comment = self.property.comments?.safeGet(index: index) ?? Comment()
+                let comment = self.property.getOnlyActiveComments().safeGet(index: index) ?? Comment()
                 comment.isActive = false
                 self.updateProperty()
             }

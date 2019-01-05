@@ -54,9 +54,9 @@ class Property{
         
         let tempComments = data["comments"] as! [[String:Any]]?
         tempComments?.forEach({(temp) in
-//            if data["isActive"] != nil && (data["isActive"] as? Int == 1){
-                addComment(comment: Comment(data:temp))
-//            }
+            //            if data["isActive"] != nil && (data["isActive"] as? Int == 1){
+            addComment(comment: Comment(data:temp))
+            //            }
         })
         
         if data["lastUpdate"] != nil {
@@ -93,13 +93,19 @@ class Property{
         comment.id = "prop\(id)_\(comment.userUid)\(comments?.count ?? 1)"
         comments?.append(comment)
     }
-
+    
     func getComment(index: Int)-> Comment?{
         return comments?.safeGet(index: index)
     }
     
-    func getOnlyActiveComments(){
-        
+    func getOnlyActiveComments() -> [Comment]{
+        if let arr = comments {
+            return arr.filter { term in
+                return term.isActive
+            }
+        }else{
+            return [Comment]()
+        }
     }
     
     func updateCommentIfExists(comment:Comment){

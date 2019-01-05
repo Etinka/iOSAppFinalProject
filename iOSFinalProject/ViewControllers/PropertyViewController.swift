@@ -139,19 +139,15 @@ class PropertyViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return property?.comments?.count ?? 0
+        return property?.getOnlyActiveComments().count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:CommentTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as! CommentTableViewCell
 
         if let prop = property{
-            if let comment = prop.comments?.safeGet(index: indexPath.row){
+            if let comment = prop.getOnlyActiveComments().safeGet(index: indexPath.row){
                 cell.setView(comment: comment, row: indexPath.row, editClick: {
                     self.commentIndex = indexPath.row
                     self.moveToComment()

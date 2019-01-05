@@ -97,12 +97,12 @@ extension Property{
     }
     
     static func getLastUpdateDate(database: OpaquePointer?)-> NSDate{
-        let time = LastUpdateAt.get(database: database, tabeName: "properties")
-        return NSDate(timeIntervalSince1970: time)
+        let time = LastUpdateAt.get(database: database, tableName: "properties")
+        return NSDate(timeIntervalSince1970: time + 1)
     }
     
     static func setLastUpdateDate(database: OpaquePointer?, date: NSDate){
-        LastUpdateAt.set(database: database, tabeName: "properties", date: date.timeIntervalSince1970);
+        LastUpdateAt.set(database: database, tableName: "properties", date: date.timeIntervalSince1970);
     }
 }
 
