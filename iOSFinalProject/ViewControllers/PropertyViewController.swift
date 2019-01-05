@@ -33,7 +33,7 @@ class PropertyViewController: UIViewController {
             numberOfRoomsLabel.text = "\(prop.numberOfRooms) חדרים"
             floorLabel.text = "קומה \(prop.floor)"
             propertyTypeLabel.text = prop.houseType
-            balconyLabel.text = "מרפסות ֿֿֿ\(prop.balcony)"
+            balconyLabel.text = "\(prop.balcony) מרפסות"
             propertySizeLabel.text = "\(prop.size) מ״ר"
             
             priceLabel.textColor = UIColor.appPurple
@@ -56,17 +56,17 @@ class PropertyViewController: UIViewController {
             
             let hasElevator = prop.elevator;
             if hasElevator {
-                elevatorLabel.text = "מעלית: V"
+                elevatorLabel.text = "מעלית: יש"
             }
             else {
-                elevatorLabel.text = "מעלית: X"
+                elevatorLabel.text = "מעלית: אין"
             }
             let hasSafeRoom = prop.safeRoom;
             if hasSafeRoom {
-                safeRoomLabel.text = "ממ״ד: V"
+                safeRoomLabel.text = "ממ״ד: יש"
             }
             else {
-                safeRoomLabel.text = "ממ״ד: X"
+                safeRoomLabel.text = "ממ״ד: אין"
             }
             if prop.imageUrl != "" {
                 Model.instance.getImage(url: prop.imageUrl) {(image:UIImage?) in

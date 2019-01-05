@@ -209,7 +209,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="House" translatesAutoresizingMaskIntoConstraints="NO" id="Aeo-vr-2IC">
                                 <rect key="frame" x="0.0" y="140" width="414" height="255.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="255.5" id="DMD-IH-f91"/>
+                                    <constraint firstAttribute="height" constant="255.5" id="lUA-Uk-94t"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-SS-7ja">
@@ -240,80 +240,106 @@
                                     <segue destination="Omh-cY-OPd" kind="show" identifier="addComment" id="la4-0a-OZ3"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hwI-SG-SfW">
-                                <rect key="frame" x="26" y="471" width="229" height="61.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מחיר" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3I-8h-SiO">
+                                <rect key="frame" x="26" y="405" width="33.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="h8y-im-exE">
+                                <rect key="frame" x="26" y="445.5" width="368" height="81"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מחיר" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3I-8h-SiO">
-                                        <rect key="frame" x="0.0" y="0.0" width="229" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8y-im-exE">
-                                        <rect key="frame" x="0.0" y="20.5" width="229" height="41"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Kg-1a-2LN">
+                                        <rect key="frame" x="0.0" y="0.0" width="73" height="81"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aqe-l0-fU2">
-                                                <rect key="frame" x="0.0" y="0.0" width="59" height="41"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="סוג הנכס" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOP-Sm-LeN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="קומה" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hh-mB-Lrg">
-                                                        <rect key="frame" x="0.0" y="20.5" width="59" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S2k-en-W7Y">
-                                                <rect key="frame" x="59" y="0.0" width="84.5" height="41"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מספר חדרים" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rB-V9-cat">
-                                                        <rect key="frame" x="0.0" y="0.0" width="84.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מעלית" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMe-TH-xB6">
-                                                        <rect key="frame" x="0.0" y="20.5" width="84.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8yf-kT-osw">
-                                                <rect key="frame" x="143.5" y="0.0" width="53.5" height="41"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מרפסות" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZW-6U-8KV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ממ״ד" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDa-cF-WbZ">
-                                                        <rect key="frame" x="0.0" y="20.5" width="53.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Hm-01-nkQ">
-                                                <rect key="frame" x="197" y="0.0" width="32" height="41"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="גודל " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WP-gk-9vh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="41"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="houseType" translatesAutoresizingMaskIntoConstraints="NO" id="N0A-LZ-Gd4">
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="20"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="סוג הנכס" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOP-Sm-LeN">
+                                                <rect key="frame" x="0.0" y="20" width="73" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor" translatesAutoresizingMaskIntoConstraints="NO" id="bCU-g9-oBd">
+                                                <rect key="frame" x="0.0" y="40.5" width="73" height="20"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="קומה" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hh-mB-Lrg">
+                                                <rect key="frame" x="0.0" y="60.5" width="73" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="apK-bn-Fay">
+                                        <rect key="frame" x="93" y="0.0" width="105" height="81"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rooms" translatesAutoresizingMaskIntoConstraints="NO" id="frB-Ek-Jhi">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="20"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="מספר חדרים" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rB-V9-cat">
+                                                <rect key="frame" x="0.0" y="20" width="105" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="elevator" translatesAutoresizingMaskIntoConstraints="NO" id="hXz-FW-OqO">
+                                                <rect key="frame" x="0.0" y="40.5" width="105" height="20"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="מעלית" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMe-TH-xB6">
+                                                <rect key="frame" x="0.0" y="60.5" width="105" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BtQ-Y1-7ER">
+                                        <rect key="frame" x="218" y="0.0" width="66.5" height="81"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balcony" translatesAutoresizingMaskIntoConstraints="NO" id="5t5-JG-z75">
+                                                <rect key="frame" x="0.0" y="0.0" width="66.5" height="20"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מרפסות" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZW-6U-8KV">
+                                                <rect key="frame" x="0.0" y="20" width="66.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safeRoom" translatesAutoresizingMaskIntoConstraints="NO" id="Lbk-Me-pO5">
+                                                <rect key="frame" x="0.0" y="40.5" width="66.5" height="20"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ממ״ד" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDa-cF-WbZ">
+                                                <rect key="frame" x="0.0" y="60.5" width="66.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aAu-rK-8Ld">
+                                        <rect key="frame" x="304.5" y="0.0" width="63.5" height="81"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="houseSize" translatesAutoresizingMaskIntoConstraints="NO" id="OMH-Kv-Khh">
+                                                <rect key="frame" x="0.0" y="0.0" width="63.5" height="20"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="גודל " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WP-gk-9vh">
+                                                <rect key="frame" x="0.0" y="20" width="63.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_x" translatesAutoresizingMaskIntoConstraints="NO" id="8vA-3h-xtl">
+                                                <rect key="frame" x="0.0" y="40.5" width="63.5" height="20"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hR-ao-rAd">
+                                                <rect key="frame" x="0.0" y="60.5" width="63.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -321,13 +347,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hwI-SG-SfW" firstAttribute="top" secondItem="1dK-i8-E3W" secondAttribute="top" constant="331" id="5mq-fI-1gX"/>
-                            <constraint firstItem="1dK-i8-E3W" firstAttribute="bottom" secondItem="ZcF-SS-7ja" secondAttribute="bottom" constant="26" id="8Wo-CR-P7h"/>
-                            <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" secondItem="ZcF-SS-7ja" secondAttribute="trailing" constant="26" id="EnZ-Ce-AYq"/>
-                            <constraint firstItem="hwI-SG-SfW" firstAttribute="leading" secondItem="1dK-i8-E3W" secondAttribute="leading" constant="26" id="IG3-te-VQR"/>
-                            <constraint firstItem="Aeo-vr-2IC" firstAttribute="leading" secondItem="1dK-i8-E3W" secondAttribute="leading" id="KKM-Hf-1Ki"/>
-                            <constraint firstItem="Aeo-vr-2IC" firstAttribute="trailing" secondItem="1dK-i8-E3W" secondAttribute="trailing" id="SXC-zI-sfo"/>
-                            <constraint firstItem="Aeo-vr-2IC" firstAttribute="top" secondItem="1dK-i8-E3W" secondAttribute="top" id="iFT-ZU-PdT"/>
+                            <constraint firstItem="N3I-8h-SiO" firstAttribute="leading" secondItem="1dK-i8-E3W" secondAttribute="leading" constant="26" id="3rB-jp-9kf"/>
+                            <constraint firstItem="h8y-im-exE" firstAttribute="top" secondItem="N3I-8h-SiO" secondAttribute="bottom" constant="20" id="7HS-xr-4Lh"/>
+                            <constraint firstItem="Aeo-vr-2IC" firstAttribute="top" secondItem="1dK-i8-E3W" secondAttribute="top" id="EtR-ND-vii"/>
+                            <constraint firstItem="N3I-8h-SiO" firstAttribute="top" secondItem="1dK-i8-E3W" secondAttribute="top" constant="265" id="GRh-Qy-rUO"/>
+                            <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="N3I-8h-SiO" secondAttribute="trailing" symbolic="YES" id="ITg-XP-D3F"/>
+                            <constraint firstItem="Aeo-vr-2IC" firstAttribute="trailing" secondItem="1dK-i8-E3W" secondAttribute="trailing" id="J0S-Fv-bbg"/>
+                            <constraint firstItem="h8y-im-exE" firstAttribute="trailing" secondItem="0CN-iE-rqd" secondAttribute="trailingMargin" id="bOh-Tj-x28"/>
+                            <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" secondItem="ZcF-SS-7ja" secondAttribute="trailing" constant="26" id="dYZ-Zw-7I0"/>
+                            <constraint firstItem="h8y-im-exE" firstAttribute="leading" secondItem="N3I-8h-SiO" secondAttribute="leading" id="fnQ-Zh-bex"/>
+                            <constraint firstItem="Aeo-vr-2IC" firstAttribute="leading" secondItem="1dK-i8-E3W" secondAttribute="leading" id="pLK-l2-eWY"/>
+                            <constraint firstItem="1dK-i8-E3W" firstAttribute="bottom" secondItem="ZcF-SS-7ja" secondAttribute="bottom" constant="26" id="qkk-AX-3nQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1dK-i8-E3W"/>
                     </view>
@@ -345,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWN-29-CWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1871.2" y="975.56221889055485"/>
+            <point key="canvasLocation" x="1871.0144927536232" y="975"/>
         </scene>
         <!--Add Comment View Controller-->
         <scene sceneID="G0c-8Q-wuV">
@@ -593,7 +623,14 @@
         <image name="AddImagePurple" width="34" height="34"/>
         <image name="GagLogo" width="130" height="121"/>
         <image name="House" width="128" height="128"/>
+        <image name="balcony" width="20" height="20"/>
+        <image name="elevator" width="20" height="20"/>
+        <image name="floor" width="20" height="20"/>
+        <image name="houseSize" width="20" height="20"/>
+        <image name="houseType" width="20" height="20"/>
         <image name="ic_x" width="20" height="20"/>
+        <image name="rooms" width="20" height="20"/>
+        <image name="safeRoom" width="20" height="20"/>
         <namedColor name="AppPink">
             <color red="0.89803921568627454" green="0.20000000000000001" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
