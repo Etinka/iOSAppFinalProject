@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		37AB249770D0A5BCE0BED21D /* Pods_iOSFinalProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F24B86CC23F03311A26B17 /* Pods_iOSFinalProjectTests.framework */; };
+		A52A59FB21E1D2F200EB55E3 /* PropertyInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A59F921E1D2F200EB55E3 /* PropertyInfoTableViewCell.swift */; };
+		A52A59FC21E1D2F200EB55E3 /* PropertyInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52A59FA21E1D2F200EB55E3 /* PropertyInfoTableViewCell.xib */; };
+		A52A59FF21E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A59FD21E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.swift */; };
+		A52A5A0021E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52A59FE21E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.xib */; };
 		A537209321CA77BF00613145 /* Heebo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537208C21CA77BE00613145 /* Heebo-Regular.ttf */; };
 		A537209421CA77C000613145 /* Heebo-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537208D21CA77BE00613145 /* Heebo-ExtraBold.ttf */; };
 		A537209521CA77C000613145 /* Heebo-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537208E21CA77BE00613145 /* Heebo-Thin.ttf */; };
@@ -80,6 +84,10 @@
 		8058B001FE24BC0A351DC5B7 /* Pods-iOSFinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFinalProject/Pods-iOSFinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		A51FDAEC21C403C400B4A7BD /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Main.strings; sourceTree = "<group>"; };
 		A51FDAED21C403C500B4A7BD /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A52A59F921E1D2F200EB55E3 /* PropertyInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PropertyInfoTableViewCell.swift; path = iOSFinalProject/Cells/PropertyInfoTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		A52A59FA21E1D2F200EB55E3 /* PropertyInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PropertyInfoTableViewCell.xib; path = iOSFinalProject/Cells/PropertyInfoTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		A52A59FD21E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSeperatorTableViewCell.swift; sourceTree = "<group>"; };
+		A52A59FE21E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsSeperatorTableViewCell.xib; sourceTree = "<group>"; };
 		A537208C21CA77BE00613145 /* Heebo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Regular.ttf"; sourceTree = "<group>"; };
 		A537208D21CA77BE00613145 /* Heebo-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-ExtraBold.ttf"; sourceTree = "<group>"; };
 		A537208E21CA77BE00613145 /* Heebo-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Thin.ttf"; sourceTree = "<group>"; };
@@ -303,9 +311,13 @@
 		A595462A21C3C0C400DFF43C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A52A59F921E1D2F200EB55E3 /* PropertyInfoTableViewCell.swift */,
+				A52A59FA21E1D2F200EB55E3 /* PropertyInfoTableViewCell.xib */,
 				A595462B21C3C0D900DFF43C /* PropertyTableViewCell.swift */,
 				A53A41F921E0A57300CE525C /* CommentTableViewCell.swift */,
 				A53A41FA21E0A57300CE525C /* CommentTableViewCell.xib */,
+				A52A59FD21E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.swift */,
+				A52A59FE21E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -435,9 +447,11 @@
 				A537209321CA77BF00613145 /* Heebo-Regular.ttf in Resources */,
 				A59545F421C3BCB900DFF43C /* LaunchScreen.storyboard in Resources */,
 				A537209621CA77C000613145 /* Heebo-Light.ttf in Resources */,
+				A52A5A0021E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.xib in Resources */,
 				A59545F121C3BCB900DFF43C /* Assets.xcassets in Resources */,
 				A537209421CA77C000613145 /* Heebo-ExtraBold.ttf in Resources */,
 				A537209821CA77C000613145 /* Heebo-Black.ttf in Resources */,
+				A52A59FC21E1D2F200EB55E3 /* PropertyInfoTableViewCell.xib in Resources */,
 				A537209721CA77C000613145 /* Heebo-Medium.ttf in Resources */,
 				A53A41FC21E0A57300CE525C /* CommentTableViewCell.xib in Resources */,
 				A537209521CA77C000613145 /* Heebo-Thin.ttf in Resources */,
@@ -590,6 +604,7 @@
 				A55F1F9121DD400300634F0D /* CommentSql.swift in Sources */,
 				A59545EF21C3BCB800DFF43C /* iOSFinalProject.xcdatamodeld in Sources */,
 				A57A634121C5283100E836B0 /* GeneralExtensions.swift in Sources */,
+				A52A59FF21E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.swift in Sources */,
 				A595463C21C3C10F00DFF43C /* Model.swift in Sources */,
 				A549275021DD0A1D0067817E /* PropertySql.swift in Sources */,
 				A595463B21C3C10F00DFF43C /* FirebaseModel.swift in Sources */,
@@ -605,6 +620,7 @@
 				A5F47F0421C3C73100A2AC48 /* RegisterViewController.swift in Sources */,
 				A549274E21DD09A40067817E /* ModelSql.swift in Sources */,
 				A595463421C3C10000DFF43C /* PropertiesTableViewController.swift in Sources */,
+				A52A59FB21E1D2F200EB55E3 /* PropertyInfoTableViewCell.swift in Sources */,
 				A595464A21C3C51600DFF43C /* NotificationService.swift in Sources */,
 				A595464521C3C4C300DFF43C /* BaseLoginViewController.swift in Sources */,
 				A56C40A121C4F83100203A9B /* SplashViewController.swift in Sources */,

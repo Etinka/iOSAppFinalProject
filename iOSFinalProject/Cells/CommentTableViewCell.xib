@@ -13,10 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="180" id="KGk-i7-Jjw" customClass="CommentTableViewCell" customModule="iOSFinalProject" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="180.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="179.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fxm-Hv-ag6">
@@ -36,17 +36,17 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiE-sf-Spw">
-                        <rect key="frame" x="94" y="11" width="1" height="159"/>
+                        <rect key="frame" x="94" y="11" width="1" height="158"/>
                         <color key="backgroundColor" name="AppPink"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="1" id="B8O-g8-nyS"/>
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rI0-6X-7Lm" userLabel="CommentStackView">
-                        <rect key="frame" x="103" y="11" width="201" height="159"/>
+                        <rect key="frame" x="103" y="11" width="201" height="158"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="htJ-Zt-ylx">
-                                <rect key="frame" x="0.0" y="0.0" width="201" height="79"/>
+                                <rect key="frame" x="0.0" y="0.0" width="201" height="78"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -61,7 +61,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-Za-3xW">
-                                <rect key="frame" x="0.0" y="79" width="201" height="80"/>
+                                <rect key="frame" x="0.0" y="78" width="201" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="qJk-j4-v4H"/>
                                 </constraints>
@@ -82,7 +82,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZZ-fc-M3J">
-                        <rect key="frame" x="21" y="112" width="60" height="44"/>
+                        <rect key="frame" x="21" y="111" width="60" height="44"/>
                         <color key="backgroundColor" name="AppPink"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="MYS-b9-o08"/>
