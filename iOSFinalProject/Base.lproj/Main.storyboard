@@ -263,8 +263,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWY-bb-Gke">
+                                <rect key="frame" x="36" y="585" width="282" height="2"/>
+                                <color key="backgroundColor" name="AppPurple"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="L4a-kh-ySA"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddImagePurple" translatesAutoresizingMaskIntoConstraints="NO" id="W26-GR-f6B">
+                                <rect key="frame" x="135" y="638" width="144" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="dKu-eu-s0I"/>
+                                    <constraint firstAttribute="width" constant="144" id="fJO-aU-pGB"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOl-JI-5uI">
+                                <rect key="frame" x="123" y="626" width="32" height="22"/>
+                                <color key="backgroundColor" name="AppPink"/>
+                                <state key="normal" image="ic_x"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickedRemoveImage:" destination="Omh-cY-OPd" eventType="touchUpInside" id="sIq-eD-Ukl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyf-nX-TCj" customClass="LoadingButton" customModule="iOSFinalProject" customModuleProvider="target">
+                                <rect key="frame" x="25" y="768" width="364" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2CB-sb-hZF"/>
+                                </constraints>
+                                <state key="normal" title="הוסף תגובה"/>
+                                <connections>
+                                    <action selector="addCommentClicked:" destination="Omh-cY-OPd" eventType="touchUpInside" id="yeF-EQ-Jik"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHf-13-m95">
+                                <rect key="frame" x="35" y="170" width="344" height="334"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="הכנס תגובה">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Heebo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biE-vk-n9f">
-                                <rect key="frame" x="326" y="478" width="72" height="44"/>
+                                <rect key="frame" x="326" y="564" width="72" height="44"/>
                                 <color key="backgroundColor" name="AppPink"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="72" id="Fyg-CT-qwk"/>
@@ -280,90 +330,31 @@
                                     <action selector="clickedAddImage:" destination="Omh-cY-OPd" eventType="touchUpInside" id="Dca-LM-zkK"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWY-bb-Gke">
-                                <rect key="frame" x="36" y="499" width="282" height="2"/>
-                                <color key="backgroundColor" name="AppPurple"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="L4a-kh-ySA"/>
-                                </constraints>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddImagePurple" translatesAutoresizingMaskIntoConstraints="NO" id="W26-GR-f6B">
-                                <rect key="frame" x="135" y="551" width="144" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="dKu-eu-s0I"/>
-                                    <constraint firstAttribute="width" constant="144" id="fJO-aU-pGB"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOl-JI-5uI">
-                                <rect key="frame" x="127" y="542" width="32" height="22"/>
-                                <color key="backgroundColor" name="AppPink"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="DiB-8w-Qny"/>
-                                    <constraint firstAttribute="width" constant="32" id="M2G-7B-0fp"/>
-                                </constraints>
-                                <state key="normal" image="ic_x"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="clickedRemoveImage:" destination="Omh-cY-OPd" eventType="touchUpInside" id="sIq-eD-Ukl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyf-nX-TCj" customClass="LoadingButton" customModule="iOSFinalProject" customModuleProvider="target">
-                                <rect key="frame" x="25" y="719" width="364" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="2CB-sb-hZF"/>
-                                </constraints>
-                                <state key="normal" title="הוסף תגובה"/>
-                                <connections>
-                                    <action selector="addCommentClicked:" destination="Omh-cY-OPd" eventType="touchUpInside" id="yeF-EQ-Jik"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHf-13-m95">
-                                <rect key="frame" x="35" y="170" width="344" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="zZa-QS-Bo7"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="הכנס תגובה">
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="Heebo-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="tyf-nX-TCj" firstAttribute="top" secondItem="W26-GR-f6B" secondAttribute="bottom" constant="30" id="0xo-SH-RPf"/>
+                            <constraint firstItem="biE-vk-n9f" firstAttribute="top" secondItem="oHf-13-m95" secondAttribute="bottom" constant="60" id="2bS-DT-ltH"/>
                             <constraint firstItem="v3S-kP-P0O" firstAttribute="bottom" secondItem="tyf-nX-TCj" secondAttribute="bottom" constant="50" id="Ac6-da-vCR"/>
                             <constraint firstItem="oHf-13-m95" firstAttribute="leading" secondItem="v3S-kP-P0O" secondAttribute="leading" constant="35" id="CED-Xa-6yf"/>
                             <constraint firstItem="v3S-kP-P0O" firstAttribute="trailing" secondItem="oHf-13-m95" secondAttribute="trailing" constant="35" id="FDZ-eS-CUh"/>
                             <constraint firstItem="W26-GR-f6B" firstAttribute="centerX" secondItem="oTd-wl-6Jn" secondAttribute="centerX" id="Gaq-jO-ARS"/>
                             <constraint firstItem="tyf-nX-TCj" firstAttribute="leading" secondItem="v3S-kP-P0O" secondAttribute="leading" constant="25" id="J5o-2D-zNg"/>
-                            <constraint firstItem="MOl-JI-5uI" firstAttribute="leading" secondItem="v3S-kP-P0O" secondAttribute="leading" constant="127" id="KaF-4x-8Cb"/>
                             <constraint firstItem="nWY-bb-Gke" firstAttribute="centerY" secondItem="biE-vk-n9f" secondAttribute="centerY" id="Nwd-Uy-vZk"/>
                             <constraint firstItem="v3S-kP-P0O" firstAttribute="trailing" secondItem="biE-vk-n9f" secondAttribute="trailing" constant="16" id="Pf2-9R-g1B"/>
-                            <constraint firstItem="biE-vk-n9f" firstAttribute="top" secondItem="oHf-13-m95" secondAttribute="bottom" constant="8" symbolic="YES" id="R79-gj-bqo"/>
                             <constraint firstItem="v3S-kP-P0O" firstAttribute="trailing" secondItem="tyf-nX-TCj" secondAttribute="trailing" constant="25" id="SGf-c2-SHa"/>
                             <constraint firstItem="biE-vk-n9f" firstAttribute="leading" secondItem="nWY-bb-Gke" secondAttribute="trailing" constant="8" symbolic="YES" id="dQv-eE-xKe"/>
-                            <constraint firstItem="MOl-JI-5uI" firstAttribute="top" secondItem="nWY-bb-Gke" secondAttribute="bottom" constant="41" id="iBT-cZ-7Kd"/>
+                            <constraint firstAttribute="bottom" secondItem="MOl-JI-5uI" secondAttribute="bottom" constant="248" id="eVt-Gl-LWD"/>
+                            <constraint firstItem="W26-GR-f6B" firstAttribute="top" secondItem="biE-vk-n9f" secondAttribute="bottom" constant="30" id="elQ-ds-cdl"/>
+                            <constraint firstItem="v3S-kP-P0O" firstAttribute="trailing" secondItem="MOl-JI-5uI" secondAttribute="trailing" constant="259" id="kOr-He-rTh"/>
+                            <constraint firstItem="MOl-JI-5uI" firstAttribute="leading" secondItem="v3S-kP-P0O" secondAttribute="leading" constant="123" id="lv9-tD-G9F"/>
                             <constraint firstItem="nWY-bb-Gke" firstAttribute="leading" secondItem="oTd-wl-6Jn" secondAttribute="leadingMargin" constant="16" id="n6r-bM-M9k"/>
                             <constraint firstItem="oHf-13-m95" firstAttribute="top" secondItem="v3S-kP-P0O" secondAttribute="top" constant="30" id="nZe-2i-9oc"/>
-                            <constraint firstItem="W26-GR-f6B" firstAttribute="top" secondItem="nWY-bb-Gke" secondAttribute="bottom" constant="50" id="oZN-1i-k1H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v3S-kP-P0O"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="מחק" style="plain" id="pdL-cF-QJm">
-                            <color key="tintColor" name="AppPurple"/>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addButton" destination="tyf-nX-TCj" id="X7w-Dk-Ksu"/>
                         <outlet property="addImageButton" destination="biE-vk-n9f" id="LVe-TM-lAH"/>
