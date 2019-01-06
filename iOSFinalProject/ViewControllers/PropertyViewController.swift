@@ -9,9 +9,7 @@
 import UIKit
 
 class PropertyViewController: UITableViewController {
-    
-    private var commentsTableView: UITableView!
-    
+        
     var propertyId:Int?
     var property:Property?
     private var propObserver: NSObjectProtocol?
@@ -35,7 +33,7 @@ class PropertyViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addComment"{
+        if segue.identifier == "AddComment"{
             let commentVc:AddCommentViewController = segue.destination as! AddCommentViewController
             
             if let prop = property {
@@ -81,7 +79,7 @@ class PropertyViewController: UITableViewController {
     }
     
     @objc func moveToComment(){
-        performSegue(withIdentifier: "addComment", sender: self)
+        performSegue(withIdentifier: "AddComment", sender: self)
     }
     
     override   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -109,7 +107,7 @@ class PropertyViewController: UITableViewController {
                 let temp = data as! Property
                 if temp.id == self.property?.id{
                     self.property = temp
-                    self.commentsTableView.reloadData()
+                    self.tableView.reloadData()
                 }
             }
         }

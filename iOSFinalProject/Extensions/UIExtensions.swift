@@ -74,6 +74,13 @@ extension ErrorTextField{
         self.placeholder = "דואר אלקטרוני"
         self.error = "זו לא כתובת אימייל תקינה"
     }
+    
+    func setUserNameStyle(){
+        setStyle()
+        self.placeholder = "שם משתמש"
+        self.error = ""
+
+    }
 }
 
 extension TextField{

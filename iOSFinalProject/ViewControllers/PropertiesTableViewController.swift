@@ -21,6 +21,8 @@ class PropertiesTableViewController: UITableViewController {
         Model.instance.getAllProperties()
     }
     
+    
+    
     deinit{
        unregisterToListChanges()
     }
@@ -69,6 +71,8 @@ class PropertiesTableViewController: UITableViewController {
     }
     
     func unregisterToListChanges(){
-        NotificationService.propertiesListUpdated.removeObserver(observer: listObserver)
+        if (listObserver != nil){
+            NotificationService.propertiesListUpdated.removeObserver(observer: listObserver)
+        }
     }
 }

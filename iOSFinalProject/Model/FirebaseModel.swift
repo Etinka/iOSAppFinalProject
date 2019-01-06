@@ -56,10 +56,10 @@ class FirebaseModel{
         return Auth.auth().currentUser?.uid ?? ""
     }
     
-    func registerUser(email: String, password: String, callback: @escaping (UserInfo) -> Void){
+    func registerUser(email: String, password: String, userName: String, callback: @escaping (UserInfo) -> Void){
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if  let userFB = authResult?.user {
-                let user = UserInfo(_id: userFB.uid, _email: userFB.email ?? "")
+                let user = UserInfo(_id: userFB.uid, _email: userFB.email ?? "", _name: userName)
                 self.userInfoCollection.addDocument(data: user.toJson(), completion:nil)
                 self.sendLoggedInStatusMessage(isLoggedIn: true)
                 callback(user)

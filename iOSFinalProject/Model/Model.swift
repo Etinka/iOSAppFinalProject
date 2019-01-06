@@ -59,8 +59,8 @@ class Model {
         return modelFirebase.isUserLoggedIn()
     }
     
-    func registerUser(email: String, password: String){
-        modelFirebase.registerUser(email: email, password: password, callback: {(info: UserInfo) in
+    func registerUser(email: String, password: String, userName: String){
+        modelFirebase.registerUser(email: email, password: password, userName: userName, callback: {(info: UserInfo) in
             self.currentUserInfo = info
         })
     }
