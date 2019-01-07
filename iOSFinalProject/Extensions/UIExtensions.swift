@@ -47,7 +47,6 @@ extension UIButton {
 extension UIViewController{
     
     func setNavigationController(){
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.appPurple, NSAttributedString.Key.font: UIFont(name: AppFontName.Medium.rawValue, size: 30)!]
         navigationController?.setStyle()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
@@ -59,12 +58,10 @@ extension UINavigationController {
     func setStyle(){
         self.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationBar.barTintColor = UIColor.white
-        self.navigationItem.titleLabel.font = UIFont(name:AppFontName.Medium.rawValue, size:18)
-        self.navigationItem.titleLabel.textColor = UIColor.appPurple
         
-        if #available(iOS 11, *){
-            self.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.appPurple, NSAttributedString.Key.font: UIFont(name: AppFontName.Medium.rawValue, size: 30)!]
-        }
+        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.appPurple, NSAttributedString.Key.font: UIFont(name: AppFontName.Medium.rawValue, size: 18)!]
+        self.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.appPurple, NSAttributedString.Key.font: UIFont(name: AppFontName.Medium.rawValue, size: 30)!]
+        
     }
 }
 
@@ -79,26 +76,26 @@ extension ErrorTextField{
         setStyle()
         self.placeholder = "שם משתמש"
         self.error = ""
-
+        
     }
 }
 
 extension TextField{
     
-    func setStyle(){
+    func setStyle(fontName: AppFontName = .Light, size: CGFloat = 12, color: UIColor = UIColor.appPurple){
         self.isPlaceholderUppercasedWhenEditing = true
         self.placeholderActiveColor = UIColor.appPurple
-        self.dividerActiveColor = UIColor.appPurple
-        self.visibilityIconButton?.tintColor = UIColor.appPurple.withAlphaComponent(self.isSecureTextEntry ? 0.38 : 0.54)
+        self.textColor = color
+        self.dividerActiveColor = color
+        self.visibilityIconButton?.tintColor = color.withAlphaComponent(self.isSecureTextEntry ? 0.38 : 0.54)
         self.clearButtonMode = .whileEditing
-        self.font = UIFont(name:AppFontName.Light.rawValue, size:12)
-        
+        self.font = UIFont(name:fontName.rawValue, size:size)
     }
     
     func setPasswordStyle(){
         setStyle()
         self.placeholder = "סיסמה"
-        self.isVisibilityIconButtonEnabled = true //todo - check if can be aligned to the left
+        self.isVisibilityIconButtonEnabled = true 
     }  
 }
 
@@ -114,12 +111,17 @@ extension UIColor {
         return UIColor.rgb(fromHex: appPurple)
     }
     
-    class func rgb(fromHex: Int) -> UIColor {
+    class var appPurpleDisabled: UIColor{
+        let appPurple = 0x734fbe
+        return UIColor.rgb(fromHex: appPurple, alpha: 0.5)
+    }
+    
+    
+    class func rgb(fromHex: Int, alpha: CGFloat = 1) -> UIColor {
         
         let red =   CGFloat((fromHex & 0xFF0000) >> 16) / 0xFF
         let green = CGFloat((fromHex & 0x00FF00) >> 8) / 0xFF
         let blue =  CGFloat(fromHex & 0x0000FF) / 0xFF
-        let alpha = CGFloat(1.0)
         
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }

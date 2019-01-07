@@ -21,7 +21,7 @@ class PropertyViewController: UITableViewController {
         registerToPropertyChanges()
         
         if let prop = property {
-            title = prop.address
+            navigationItem.title = prop.address
             initTableView()
         }
     }

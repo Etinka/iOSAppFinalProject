@@ -15,7 +15,7 @@ class PropertiesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "גג"
+        self.navigationItem.title = "גג"
         self.setNavigationController()
         registerToListChanges()
         Model.instance.getAllProperties()

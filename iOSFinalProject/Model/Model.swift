@@ -79,6 +79,9 @@ class Model {
         return modelFirebase.getUserUid()
     }
     
+    func getCurrentUserInfo() -> UserInfo?{
+        return currentUserInfo
+    }
     func getAllProperties(){
         print("getAllProperties called")
         self.getLocalPropertiesAndNotify()

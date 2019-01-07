@@ -12,6 +12,7 @@
 		A52A59FC21E1D2F200EB55E3 /* PropertyInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52A59FA21E1D2F200EB55E3 /* PropertyInfoTableViewCell.xib */; };
 		A52A59FF21E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A59FD21E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.swift */; };
 		A52A5A0021E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52A59FE21E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.xib */; };
+		A52A5A0221E24E8100EB55E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A5A0121E24E8100EB55E3 /* SettingsViewController.swift */; };
 		A537209321CA77BF00613145 /* Heebo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537208C21CA77BE00613145 /* Heebo-Regular.ttf */; };
 		A537209421CA77C000613145 /* Heebo-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537208D21CA77BE00613145 /* Heebo-ExtraBold.ttf */; };
 		A537209521CA77C000613145 /* Heebo-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A537208E21CA77BE00613145 /* Heebo-Thin.ttf */; };
@@ -88,6 +89,7 @@
 		A52A59FA21E1D2F200EB55E3 /* PropertyInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PropertyInfoTableViewCell.xib; path = iOSFinalProject/Cells/PropertyInfoTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		A52A59FD21E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSeperatorTableViewCell.swift; sourceTree = "<group>"; };
 		A52A59FE21E1DA7B00EB55E3 /* CommentsSeperatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsSeperatorTableViewCell.xib; sourceTree = "<group>"; };
+		A52A5A0121E24E8100EB55E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A537208C21CA77BE00613145 /* Heebo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Regular.ttf"; sourceTree = "<group>"; };
 		A537208D21CA77BE00613145 /* Heebo-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-ExtraBold.ttf"; sourceTree = "<group>"; };
 		A537208E21CA77BE00613145 /* Heebo-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Thin.ttf"; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				A595463021C3C10000DFF43C /* AddCommentViewController.swift */,
 				A595462F21C3C10000DFF43C /* PropertiesTableViewController.swift */,
 				A595462E21C3C0FF00DFF43C /* PropertyViewController.swift */,
+				A52A5A0121E24E8100EB55E3 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				A5F47F0421C3C73100A2AC48 /* RegisterViewController.swift in Sources */,
 				A549274E21DD09A40067817E /* ModelSql.swift in Sources */,
 				A595463421C3C10000DFF43C /* PropertiesTableViewController.swift in Sources */,
+				A52A5A0221E24E8100EB55E3 /* SettingsViewController.swift in Sources */,
 				A52A59FB21E1D2F200EB55E3 /* PropertyInfoTableViewCell.swift in Sources */,
 				A595464A21C3C51600DFF43C /* NotificationService.swift in Sources */,
 				A595464521C3C4C300DFF43C /* BaseLoginViewController.swift in Sources */,
