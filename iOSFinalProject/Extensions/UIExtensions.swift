@@ -107,15 +107,17 @@ extension UIColor {
     }
     
     class var appPurple: UIColor{
-        let appPurple = 0x734fbe
-        return UIColor.rgb(fromHex: appPurple)
+        return UIColor.appPurpleWithAlpha(alpha: 1)
     }
     
     class var appPurpleDisabled: UIColor{
-        let appPurple = 0x734fbe
-        return UIColor.rgb(fromHex: appPurple, alpha: 0.5)
+        return UIColor.appPurpleWithAlpha(alpha: 0.5)
     }
     
+    class func appPurpleWithAlpha(alpha: CGFloat) -> UIColor{
+        let appPurple = 0x734fbe
+        return UIColor.rgb(fromHex: appPurple, alpha: alpha)
+    }
     
     class func rgb(fromHex: Int, alpha: CGFloat = 1) -> UIColor {
         

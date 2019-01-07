@@ -17,6 +17,8 @@ class PropertyTableViewCell: UITableViewCell {
     @IBOutlet weak var cellContentView: UIView!
     @IBOutlet weak var detailsView: UIView!
     
+    var propertyImageView: UIImageView? = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -34,17 +36,19 @@ class PropertyTableViewCell: UITableViewCell {
         priceLabel.text = " ₪ \(st.price)"
         numOfRoomsLabel.text = "מספר חדרים: \(st.numberOfRooms)"
         
+        propertyImageView = UIImageView(frame: CGRect(x: 10, y: 0, width: self.frame.width - 20, height: self.frame.height - 10))
+        propertyImageView?.layer.cornerRadius = 15
+        propertyImageView?.layer.masksToBounds = true
+        propertyImageView?.backgroundColor = UIColor.appPurpleWithAlpha(alpha: 0.3)
+        self.addSubview(propertyImageView!)
+        self.sendSubviewToBack(propertyImageView!)
+        
         contentView.tag = row
         if st.imageUrl != "" {
             Model.instance.getImage(url: st.imageUrl) { (image:UIImage?) in
                 if (self.contentView.tag == row){
                     if image != nil {
-                        let imageView = UIImageView(frame: CGRect(x: 10, y: 0, width: self.frame.width - 20, height: self.frame.height - 10))
-                        imageView.layer.cornerRadius = 15
-                        imageView.layer.masksToBounds = true
-                        imageView.image = image
-                        self.addSubview(imageView)
-                        self.sendSubviewToBack(imageView)
+                        self.propertyImageView?.image = image
                     }
                 }
             }
