@@ -26,7 +26,6 @@ class PropertyTableViewCell: UITableViewCell {
     }
     
     func setLabelsStyle(){
-        priceLabel.setStyle(fontName: .Bold, size: 20, color: UIColor.white)
         addressLabel.setStyle(size: 14)
         numOfRoomsLabel.setStyle(size: 14)
     }
@@ -39,16 +38,19 @@ class PropertyTableViewCell: UITableViewCell {
         propertyImageView = UIImageView(frame: CGRect(x: 10, y: 0, width: self.frame.width - 20, height: self.frame.height - 10))
         propertyImageView?.layer.cornerRadius = 15
         propertyImageView?.layer.masksToBounds = true
-        propertyImageView?.backgroundColor = UIColor.appPurpleWithAlpha(alpha: 0.3)
+        propertyImageView?.image = UIImage(named: "PropertyPlaceholder")
         self.addSubview(propertyImageView!)
         self.sendSubviewToBack(propertyImageView!)
-        
+        priceLabel.setStyle(fontName: .Bold, size: 20, color: UIColor.appPurple)
+
         contentView.tag = row
         if st.imageUrl != "" {
             Model.instance.getImage(url: st.imageUrl) { (image:UIImage?) in
                 if (self.contentView.tag == row){
                     if image != nil {
                         self.propertyImageView?.image = image
+                        self.priceLabel.setStyle(fontName: .Bold, size: 20, color: UIColor.white)
+
                     }
                 }
             }

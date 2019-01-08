@@ -150,11 +150,16 @@
                             </stackView>
                         </subviews>
                     </stackView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="House" translatesAutoresizingMaskIntoConstraints="NO" id="Aeo-vr-2IC">
+                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PropertyPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Aeo-vr-2IC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="255.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="255.5" id="oyo-DU-uls"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
+                                <integer key="value" value="22"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                 </subviews>
                 <constraints>
@@ -191,7 +196,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="House" width="128" height="128"/>
+        <image name="PropertyPlaceholder" width="342" height="180"/>
         <image name="balcony" width="20" height="20"/>
         <image name="elevator" width="20" height="20"/>
         <image name="floor" width="20" height="20"/>

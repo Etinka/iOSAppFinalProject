@@ -71,6 +71,7 @@ class PropertyInfoTableViewCell: UITableViewCell {
         else {
             safeRoomLabel.text = "ממ״ד: אין"
         }
+        
         if prop.imageUrl != "" {
             Model.instance.getImage(url: prop.imageUrl) {(image:UIImage?) in
                 if image != nil {
