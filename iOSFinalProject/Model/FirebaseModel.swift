@@ -27,7 +27,6 @@ class FirebaseModel{
         db = Firestore.firestore()
         propertiesCollection = db.collection("properties")
         userInfoCollection = db.collection("users")
-//        logout()
     }
     
     func start(){
@@ -92,7 +91,6 @@ class FirebaseModel{
         listener = propertiesCollection.whereField("lastUpdate", isGreaterThan: from).addSnapshotListener({ (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
-                //Todo --> add error handling in the viewcontroller
             } else {
                 var data = [Property]()
                 
@@ -110,7 +108,6 @@ class FirebaseModel{
          self.userInfoCollection.whereField("id", isEqualTo: id).addSnapshotListener({ (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
-                //Todo --> add error handling in the viewcontroller
             } else {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")

@@ -63,7 +63,7 @@ class LoginViewController: BaseLoginViewController {
             loginButton.isEnabled = false
             return
         }
-        // enable okButton if all conditions are met
+        // enable login button if all conditions are met
         loginButton.isEnabled = true
     }
     

@@ -32,7 +32,7 @@ extension UIButton {
     }
     
     func setBackgroundColor(color: UIColor, forState: UIControl.State) {
-        self.clipsToBounds = true  // add this to maintain corner radius
+        self.clipsToBounds = true  
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         if let context = UIGraphicsGetCurrentContext() {
             context.setFillColor(color.cgColor)

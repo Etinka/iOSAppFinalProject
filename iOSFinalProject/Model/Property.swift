@@ -54,9 +54,7 @@ class Property{
         
         let tempComments = data["comments"] as! [[String:Any]]?
         tempComments?.forEach({(temp) in
-            //            if data["isActive"] != nil && (data["isActive"] as? Int == 1){
             addComment(comment: Comment(data:temp))
-            //            }
         })
         
         if data["lastUpdate"] != nil {

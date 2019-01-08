@@ -11,7 +11,7 @@ import UIKit
 
 class Model {
     
-    static let instance:Model = Model()
+    static let instance: Model = Model()
     
     var modelFirebase = FirebaseModel()
     var modelSql = ModelSql();

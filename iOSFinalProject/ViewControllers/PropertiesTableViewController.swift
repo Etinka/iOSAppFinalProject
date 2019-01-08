@@ -21,8 +21,6 @@ class PropertiesTableViewController: UITableViewController {
         Model.instance.getAllProperties()
     }
     
-    
-    
     deinit{
        unregisterToListChanges()
     }

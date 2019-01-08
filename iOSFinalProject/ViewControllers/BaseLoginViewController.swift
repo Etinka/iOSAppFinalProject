@@ -23,7 +23,6 @@ class BaseLoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         registerToAuthChanges()
-        
     }
     
     deinit {

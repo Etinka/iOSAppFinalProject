@@ -42,8 +42,6 @@ class ModelSql {
             if sqlVersion is Int && (version > sqlVersion as! Int ) {
                 dropTables()
             }
-        }else{
-            dropTables()
         }
     }
     

@@ -299,13 +299,13 @@
 		A595461F21C3C0A700DFF43C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A595464221C3C4C300DFF43C /* BaseLoginViewController.swift */,
 				A56C40A021C4F83100203A9B /* SplashViewController.swift */,
+				A595464221C3C4C300DFF43C /* BaseLoginViewController.swift */,
 				A5F47F0121C3C73000A2AC48 /* LoginViewController.swift */,
 				A5F47F0221C3C73000A2AC48 /* RegisterViewController.swift */,
-				A595463021C3C10000DFF43C /* AddCommentViewController.swift */,
 				A595462F21C3C10000DFF43C /* PropertiesTableViewController.swift */,
 				A595462E21C3C0FF00DFF43C /* PropertyViewController.swift */,
+				A595463021C3C10000DFF43C /* AddCommentViewController.swift */,
 				A52A5A0121E24E8100EB55E3 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
